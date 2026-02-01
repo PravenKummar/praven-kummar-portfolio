@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praven Kummar | Regional IT Project Manager Singapore</title>
+    <meta name="description"
+        content="Portfolio of Praven Kummar - Regional IT Project Manager specializing in Cybersecurity, Peppol E-Invoicing, Cloud Infrastructure, and Enterprise Solutions across APAC.">
+    <meta name="keywords" content="IT Project Manager, Regional IT Manager, Singapore, APAC, Cybersecurity, SIEM, QRadar, PAM, CyberArk, Peppol, E-Invoicing, Cloud Infrastructure, WMS, MES, Enterprise Solutions, IBM, Techlab Security, DataPost">
+    <meta name="author" content="Praven Kummar">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://pravenkummar.com/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💼</text></svg>">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pravenkummar.com/">
+    <meta property="og:title" content="Praven Kummar | Regional IT Project Manager">
+    <meta property="og:description" content="Regional IT Project Manager with 10+ years experience delivering $10M+ cybersecurity, infrastructure, and enterprise solutions across 8 APAC countries.">
+    <meta property="og:image" content="https://pravenkummar.com/og-image.png">
+    <meta property="og:locale" content="en_SG">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://pravenkummar.com/">
+    <meta name="twitter:title" content="Praven Kummar | Regional IT Project Manager">
+    <meta name="twitter:description" content="Regional IT Project Manager with 10+ years experience delivering $10M+ cybersecurity, infrastructure, and enterprise solutions across 8 APAC countries.">
+    <meta name="twitter:image" content="https://pravenkummar.com/og-image.png">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Praven Kummar",
+        "jobTitle": "Regional IT Project Manager",
+        "url": "https://pravenkummar.com",
+        "email": "pravenkummar@outlook.com",
+        "telephone": ["+65 9130 4748", "+60 102 649 288"],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Singapore",
+            "addressCountry": "SG"
+        },
+        "alumniOf": [
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Asia Pacific University (APU)"
+            },
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Staffordshire University"
+            }
+        ],
+        "knowsAbout": ["IT Project Management", "Cybersecurity", "SIEM", "QRadar", "PAM", "CyberArk", "Peppol E-Invoicing", "Cloud Infrastructure", "WMS", "MES"],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "DataPost Pte Ltd"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/pravenkummar"
+        ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#003366',
+                            slate: '#708090',
+                            light: '#f8fafc',
+                            dark: '#1e293b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #e2e8f0;
+            z-index: 0;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-line::before {
+                left: 20px;
+            }
+        }
+
+        .skill-tag {
+            @apply px-3 py-1 text-xs font-medium rounded-full;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-brand-navy tracking-tight">PRAVEN KUMMAR</h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#about" class="text-slate-600 hover:text-brand-navy font-medium transition">About</a>
+                <a href="#experience" class="text-slate-600 hover:text-brand-navy font-medium transition">Experience</a>
+                <a href="#projects" class="text-slate-600 hover:text-brand-navy font-medium transition">Projects</a>
+                <a href="#skills" class="text-slate-600 hover:text-brand-navy font-medium transition">Skills</a>
+                <a href="#education" class="text-slate-600 hover:text-brand-navy font-medium transition">Education</a>
+                <a href="#contact" class="text-slate-600 hover:text-brand-navy font-medium transition">Contact</a>
+            </nav>
+            <button id="menuBtn" class="md:hidden text-brand-navy focus:outline-none" aria-label="Toggle Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-100 px-6 py-4">
+            <a href="#about" class="block py-2 text-slate-600 hover:text-brand-navy">About</a>
+            <a href="#experience" class="block py-2 text-slate-600 hover:text-brand-navy">Experience</a>
+            <a href="#projects" class="block py-2 text-slate-600 hover:text-brand-navy">Projects</a>
+            <a href="#skills" class="block py-2 text-slate-600 hover:text-brand-navy">Skills</a>
+            <a href="#education" class="block py-2 text-slate-600 hover:text-brand-navy">Education</a>
+            <a href="#contact" class="block py-2 text-slate-600 hover:text-brand-navy">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-32 pb-20 bg-gradient-to-br from-slate-50 via-white to-slate-100">
+        <div class="container mx-auto px-6 flex flex-col items-center text-center">
+            <span class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-brand-navy uppercase bg-blue-50 rounded-full border border-blue-100">
+                10+ Years Experience
+            </span>
+            <h2 class="text-4xl md:text-6xl font-bold text-brand-navy mb-6 leading-tight">
+                REGIONAL IT <br class="hidden md:block" /> PROJECT MANAGER
+            </h2>
+            <p class="text-xl text-slate-600 mb-6 max-w-3xl mx-auto font-light leading-relaxed">
+                Delivering complex IT projects across APAC & Europe from both vendor and end-user perspectives.
+                Specialized in Cybersecurity, Peppol E-Invoicing, Cloud Infrastructure, and Enterprise Solutions.
+            </p>
+            <p class="text-base text-slate-500 mb-10 max-w-2xl mx-auto">
+                Based in Singapore | Serving Banking, Insurance, FinTech, Manufacturing, Aviation, Telecommunications & Government sectors
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#projects"
+                    class="bg-brand-navy hover:bg-[#002244] text-white px-8 py-3 rounded-md font-semibold transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    View Projects
+                </a>
+                <a href="#contact"
+                    class="bg-white hover:bg-slate-50 text-brand-navy border border-slate-200 px-8 py-3 rounded-md font-semibold transition duration-300">
+                    Contact Me
+                </a>
+                <a href="Praven-Kummar-Resume.pdf" download target="_blank"
+                    class="bg-slate-100 hover:bg-slate-200 text-brand-navy border border-slate-200 px-8 py-3 rounded-md font-semibold transition duration-300">
+                    Download CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="bg-brand-navy py-12 text-white">
+        <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+            <div class="p-4">
+                <div class="text-3xl md:text-5xl font-bold mb-2">$10M</div>
+                <div class="text-blue-200 uppercase tracking-wider text-xs md:text-sm font-medium">Largest Project Managed</div>
+            </div>
+            <div class="p-4">
+                <div class="text-3xl md:text-5xl font-bold mb-2">70+</div>
+                <div class="text-blue-200 uppercase tracking-wider text-xs md:text-sm font-medium">Software Projects Delivered</div>
+            </div>
+            <div class="p-4">
+                <div class="text-3xl md:text-5xl font-bold mb-2">1,000+</div>
+                <div class="text-blue-200 uppercase tracking-wider text-xs md:text-sm font-medium">Servers Managed</div>
+            </div>
+            <div class="p-4">
+                <div class="text-3xl md:text-5xl font-bold mb-2">8,000+</div>
+                <div class="text-blue-200 uppercase tracking-wider text-xs md:text-sm font-medium">Endpoints Secured</div>
+            </div>
+            <div class="p-4">
+                <div class="text-3xl md:text-5xl font-bold mb-2">8</div>
+                <div class="text-blue-200 uppercase tracking-wider text-xs md:text-sm font-medium">APAC Countries</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center text-brand-navy mb-4">Professional Experience</h3>
+            <p class="text-center text-slate-500 mb-16 max-w-2xl mx-auto">A decade of delivering complex IT projects from both vendor and end-user perspectives</p>
+
+            <div class="relative timeline-line max-w-4xl mx-auto">
+
+                <!-- DataPost - Current -->
+                <div class="mb-12 relative z-10">
+                    <div class="flex flex-col md:flex-row items-center md:items-start w-full">
+                        <div class="w-full md:w-1/2 md:pr-10 md:text-right mb-4 md:mb-0 hidden md:block">
+                            <h4 class="text-xl font-bold text-brand-navy">DataPost Pte Ltd</h4>
+                            <p class="text-slate-500 font-medium">Regional IT Project Manager</p>
+                            <p class="text-sm text-slate-400 mt-1">Jan 2024 - Present</p>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-white border-4 border-brand-navy rounded-full shadow-md ml-[18px] md:ml-[0px] mt-1.5 md:mt-2 animate-pulse"></div>
+                        <div class="w-full md:w-1/2 pl-12 md:pl-10">
+                            <div class="md:hidden mb-2">
+                                <h4 class="text-xl font-bold text-brand-navy">DataPost Pte Ltd</h4>
+                                <p class="text-slate-500 font-medium">Regional IT Project Manager | Jan 2024 - Present</p>
+                            </div>
+                            <div class="bg-slate-50 p-6 rounded-lg border border-slate-100 hover:shadow-md transition duration-300">
+                                <ul class="text-slate-600 text-sm leading-relaxed space-y-2">
+                                    <li>• Directing SaaS InvoiceNow solutions for <strong>CIMB and OCBC</strong> banks</li>
+                                    <li>• Managing API & SFTP integrations for <strong>Acer, Mapletree, Singtel, Diners Club, SPH</strong></li>
+                                    <li>• <strong>Single-handedly</strong> achieved Peppol Service Provider accreditation for Malaysia entity (SSM, LHDN, MDEC)</li>
+                                    <li>• Leading compliance for Singapore (InvoiceNow) & Malaysia (MyInvoice) with IMDA/MDEC</li>
+                                </ul>
+                                <div class="flex flex-wrap gap-2 mt-4">
+                                    <span class="skill-tag bg-blue-100 text-blue-800">Peppol</span>
+                                    <span class="skill-tag bg-green-100 text-green-800">AWS</span>
+                                    <span class="skill-tag bg-purple-100 text-purple-800">FinTech</span>
+                                    <span class="skill-tag bg-orange-100 text-orange-800">ISO 20022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Great Eastern -->
+                <div class="mb-12 relative z-10">
+                    <div class="flex flex-col md:flex-row items-center md:items-start w-full">
+                        <div class="w-full md:w-1/2 md:pr-10 md:text-right mb-4 md:mb-0 hidden md:block"></div>
+                        <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-brand-navy border-4 border-white rounded-full shadow-md ml-[18px] md:ml-[0px] mt-1.5 md:mt-2"></div>
+                        <div class="w-full md:w-1/2 pl-12 md:pl-10">
+                            <div class="md:hidden mb-2">
+                                <h4 class="text-xl font-bold text-brand-navy">Great Eastern Life Sdn Bhd</h4>
+                                <p class="text-slate-500 font-medium">Vice President, IT Project Manager | May 2021 - Dec 2023</p>
+                            </div>
+                            <div class="bg-slate-50 p-6 rounded-lg border border-slate-100 hover:shadow-md transition duration-300">
+                                <h4 class="text-xl font-bold text-brand-navy hidden md:block">Great Eastern Life Sdn Bhd</h4>
+                                <p class="text-slate-500 font-medium hidden md:block">Vice President, IT Project Manager</p>
+                                <p class="text-sm text-slate-400 mt-1 mb-3 hidden md:block">May 2021 - Dec 2023</p>
+                                <ul class="text-slate-600 text-sm leading-relaxed space-y-2">
+                                    <li>• Enhanced security across <strong>5 countries</strong> (~8,000 endpoints, ~550 servers)</li>
+                                    <li>• Managed <strong>$2M USD</strong> security solutions procurement (RFI/RFQ/RFP)</li>
+                                    <li>• Deployed McAfee Endpoint, Carbon Black, Zimperium Mobile Security</li>
+                                    <li>• Implemented Zero Trust strategies compliant with MAS TRM & RMIT</li>
+                                </ul>
+                                <div class="flex flex-wrap gap-2 mt-4">
+                                    <span class="skill-tag bg-red-100 text-red-800">Cybersecurity</span>
+                                    <span class="skill-tag bg-indigo-100 text-indigo-800">Zero Trust</span>
+                                    <span class="skill-tag bg-gray-100 text-gray-800">5 Countries</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Techlab -->
+                <div class="mb-12 relative z-10">
+                    <div class="flex flex-col md:flex-row items-center md:items-start w-full">
+                        <div class="w-full md:w-1/2 md:pr-10 md:text-right mb-4 md:mb-0 hidden md:block">
+                            <h4 class="text-xl font-bold text-brand-navy">Techlab Security Sdn Bhd</h4>
+                            <p class="text-slate-500 font-medium">IT Cyber Security Project Manager</p>
+                            <p class="text-sm text-slate-400 mt-1">Apr 2019 - May 2021</p>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-brand-navy border-4 border-white rounded-full shadow-md ml-[18px] md:ml-[0px] mt-1.5 md:mt-2"></div>
+                        <div class="w-full md:w-1/2 pl-12 md:pl-10">
+                            <div class="md:hidden mb-2">
+                                <h4 class="text-xl font-bold text-brand-navy">Techlab Security Sdn Bhd</h4>
+                                <p class="text-slate-500 font-medium">IT Cyber Security Project Manager | Apr 2019 - May 2021</p>
+                            </div>
+                            <div class="bg-slate-50 p-6 rounded-lg border border-slate-100 hover:shadow-md transition duration-300">
+                                <ul class="text-slate-600 text-sm leading-relaxed space-y-2">
+                                    <li>• Managed <strong>$10M USD</strong> IBM QRadar SIEM for Bank Simpanan Nasional</li>
+                                    <li>• Deployed QRadar SIEM for Bank Negara Malaysia & Great Eastern Life</li>
+                                    <li>• Led SSO integration (58 apps) for Malaysia Airlines - 2 years</li>
+                                    <li>• Directed PAM implementation for Genting (1,000+ servers, 5 years)</li>
+                                    <li>• Implemented IBM Guardium DAM for Tenaga Nasional Berhad</li>
+                                </ul>
+                                <div class="flex flex-wrap gap-2 mt-4">
+                                    <span class="skill-tag bg-purple-100 text-purple-800">QRadar</span>
+                                    <span class="skill-tag bg-orange-100 text-orange-800">PAM</span>
+                                    <span class="skill-tag bg-blue-100 text-blue-800">SSO</span>
+                                    <span class="skill-tag bg-green-100 text-green-800">DAM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carl Zeiss -->
+                <div class="mb-12 relative z-10">
+                    <div class="flex flex-col md:flex-row items-center md:items-start w-full">
+                        <div class="w-full md:w-1/2 md:pr-10 md:text-right mb-4 md:mb-0 hidden md:block"></div>
+                        <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-brand-navy border-4 border-white rounded-full shadow-md ml-[18px] md:ml-[0px] mt-1.5 md:mt-2"></div>
+                        <div class="w-full md:w-1/2 pl-12 md:pl-10">
+                            <div class="md:hidden mb-2">
+                                <h4 class="text-xl font-bold text-brand-navy">Carl Zeiss Pte Ltd</h4>
+                                <p class="text-slate-500 font-medium">IT Project Manager, APAC | Mar 2017 - Apr 2019</p>
+                            </div>
+                            <div class="bg-slate-50 p-6 rounded-lg border border-slate-100 hover:shadow-md transition duration-300">
+                                <h4 class="text-xl font-bold text-brand-navy hidden md:block">Carl Zeiss Pte Ltd</h4>
+                                <p class="text-slate-500 font-medium hidden md:block">IT Project Manager, APAC Region</p>
+                                <p class="text-sm text-slate-400 mt-1 mb-3 hidden md:block">Mar 2017 - Apr 2019</p>
+                                <ul class="text-slate-600 text-sm leading-relaxed space-y-2">
+                                    <li>• Achieved <strong>€80,442</strong> annual savings via order automation</li>
+                                    <li>• Rolled out LODB across <strong>8 APAC countries</strong> with Azure integration</li>
+                                    <li>• Upgraded 7 critical interfaces to Microsoft Cloud</li>
+                                    <li>• Implemented Customer Blacklist system (Interpol compliance)</li>
+                                    <li>• Deployed 2D Matrix Code for Industry 4.0 & IoT capabilities</li>
+                                </ul>
+                                <div class="flex flex-wrap gap-2 mt-4">
+                                    <span class="skill-tag bg-blue-100 text-blue-800">Azure</span>
+                                    <span class="skill-tag bg-green-100 text-green-800">SAP</span>
+                                    <span class="skill-tag bg-purple-100 text-purple-800">Industry 4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HP -->
+                <div class="relative z-10">
+                    <div class="flex flex-col md:flex-row items-center md:items-start w-full">
+                        <div class="w-full md:w-1/2 md:pr-10 md:text-right mb-4 md:mb-0 hidden md:block">
+                            <h4 class="text-xl font-bold text-brand-navy">Hewlett-Packard (HP) Sdn Bhd</h4>
+                            <p class="text-slate-500 font-medium">IT Project Executive & System Analyst</p>
+                            <p class="text-sm text-slate-400 mt-1">May 2014 - Mar 2017</p>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-brand-navy border-4 border-white rounded-full shadow-md ml-[18px] md:ml-[0px] mt-1.5 md:mt-2"></div>
+                        <div class="w-full md:w-1/2 pl-12 md:pl-10">
+                            <div class="md:hidden mb-2">
+                                <h4 class="text-xl font-bold text-brand-navy">Hewlett-Packard (HP) Sdn Bhd</h4>
+                                <p class="text-slate-500 font-medium">IT Project Executive | May 2014 - Mar 2017</p>
+                            </div>
+                            <div class="bg-slate-50 p-6 rounded-lg border border-slate-100 hover:shadow-md transition duration-300">
+                                <ul class="text-slate-600 text-sm leading-relaxed space-y-2">
+                                    <li>• Supported HPE/HPI global Active Directory split</li>
+                                    <li>• Office 365 / M365 platform migration</li>
+                                    <li>• Lotus Notes decommissioning & replacement</li>
+                                    <li>• <strong>Best Performing Employee of the Year 2015</strong></li>
+                                </ul>
+                                <div class="flex flex-wrap gap-2 mt-4">
+                                    <span class="skill-tag bg-blue-100 text-blue-800">M365</span>
+                                    <span class="skill-tag bg-gray-100 text-gray-800">Active Directory</span>
+                                    <span class="skill-tag bg-yellow-100 text-yellow-800">Award Winner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center text-brand-navy mb-4">Featured Projects</h3>
+            <p class="text-center text-slate-500 mb-12 max-w-2xl mx-auto">High-impact initiatives across cybersecurity, cloud, and enterprise solutions</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project 1: QRadar SIEM BSN -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-48 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center text-white">
+                        <svg class="w-16 h-16 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="px-2 py-0.5 bg-red-100 text-red-700 text-xs font-semibold rounded">$10M USD</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-brand-navy mb-2">IBM QRadar SIEM - BSN</h4>
+                        <p class="text-slate-600 text-sm mb-3 leading-relaxed">Deployed enterprise SIEM for Bank Simpanan Nasional with 15 servers covering SIEM, UEBA, Network Insight, Packet Capture, and automated security response (Resilient).</p>
+                        <p class="text-xs text-slate-400">Client: Bank Simpanan Nasional | Banking | 1 Year</p>
+                    </div>
+                    <div class="bg-slate-50 px-6 py-4 border-t border-slate-100">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs font-semibold rounded">QRadar</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded">SIEM</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 text-xs font-semibold rounded">Waterfall</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: InvoiceNow SaaS -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-48 bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white">
+                        <svg class="w-16 h-16 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="px-2 py-0.5 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded">Current</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-brand-navy mb-2">Cloud InvoiceNow SaaS Platform</h4>
+                        <p class="text-slate-600 text-sm mb-3 leading-relaxed">Built from-scratch white-label e-invoicing solution for CIMB & OCBC using AWS (EKS, RDS, S3), Java/Spring Boot microservices, React frontend. IMDA/IRAS/MOF compliant.</p>
+                        <p class="text-xs text-slate-400">Client: CIMB Bank, OCBC | FinTech</p>
+                    </div>
+                    <div class="bg-slate-50 px-6 py-4 border-t border-slate-100">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs font-semibold rounded">AWS</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded">Peppol</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded">Agile</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Regional Security -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white">
+                        <svg class="w-16 h-16 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="px-2 py-0.5 bg-indigo-100 text-indigo-700 text-xs font-semibold rounded">$2M USD</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-brand-navy mb-2">Regional Cybersecurity Enhancement</h4>
+                        <p class="text-slate-600 text-sm mb-3 leading-relaxed">Deployed McAfee Endpoint, Carbon Black, and Zimperium across 5 countries covering ~8,000 endpoints and ~550 servers with Zero Trust architecture.</p>
+                        <p class="text-xs text-slate-400">Client: Great Eastern Life | MY, SG, Brunei, Indo, PH</p>
+                    </div>
+                    <div class="bg-slate-50 px-6 py-4 border-t border-slate-100">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded">Zero Trust</span>
+                            <span class="px-2 py-1 bg-red-100 text-red-800 text-xs font-semibold rounded">Endpoint</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 text-xs font-semibold rounded">MAS TRM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: SSO Malaysia Airlines -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-48 bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center text-white">
+                        <svg class="w-16 h-16 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="px-2 py-0.5 bg-sky-100 text-sky-700 text-xs font-semibold rounded">58 Apps</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-brand-navy mb-2">Single Sign-On Integration</h4>
+                        <p class="text-slate-600 text-sm mb-3 leading-relaxed">Integrated 58 applications into unified SSO system for Malaysia Airlines over 2 years, improving user experience and reducing password-related helpdesk calls.</p>
+                        <p class="text-xs text-slate-400">Client: Malaysia Airlines | Aviation | 2 Years</p>
+                    </div>
+                    <div class="bg-slate-50 px-6 py-4 border-t border-slate-100">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded">SSO</span>
+                            <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs font-semibold rounded">IAM</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded">Agile</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: PAM Genting -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-48 bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white">
+                        <svg class="w-16 h-16 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="px-2 py-0.5 bg-amber-100 text-amber-700 text-xs font-semibold rounded">5 Years</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-brand-navy mb-2">Thycotic PAM Implementation</h4>
+                        <p class="text-slate-600 text-sm mb-3 leading-relaxed">Secured privileged access across 1,018 servers and validated 411 applications for Genting Highlands over 5 years, meeting compliance and reducing internal threat risks.</p>
+                        <p class="text-xs text-slate-400">Client: Genting Highlands | Hospitality</p>
+                    </div>
+                    <div class="bg-slate-50 px-6 py-4 border-t border-slate-100">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs font-semibold rounded">PAM</span>
+                            <span class="px-2 py-1 bg-red-100 text-red-800 text-xs font-semibold rounded">Thycotic</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded">Agile</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: LODB Carl Zeiss -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-48 bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-white">
+                        <svg class="w-16 h-16 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="px-2 py-0.5 bg-cyan-100 text-cyan-700 text-xs font-semibold rounded">€80K Savings</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-brand-navy mb-2">Lens Order Database (LODB)</h4>
+                        <p class="text-slate-600 text-sm mb-3 leading-relaxed">Developed and rolled out centralized order management across 8 APAC countries, integrating multiple ERPs with Microsoft Azure. Achieved €80,442 annual cost savings.</p>
+                        <p class="text-xs text-slate-400">Client: Carl Zeiss | Manufacturing | 8 Countries</p>
+                    </div>
+                    <div class="bg-slate-50 px-6 py-4 border-t border-slate-100">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded">Azure</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded">SAP</span>
+                            <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs font-semibold rounded">ERP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: QRadar BNM -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-48 bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center text-white">
+                        <svg class="w-16 h-16 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="px-2 py-0.5 bg-rose-100 text-rose-700 text-xs font-semibold rounded">26 Servers</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-brand-navy mb-2">IBM QRadar SIEM - Bank Negara</h4>
+                        <p class="text-slate-600 text-sm mb-3 leading-relaxed">Deployed enterprise SIEM for Malaysia's central bank with 26 servers. Implemented UEBA, Network Insight, and security automation capabilities.</p>
+                        <p class="text-xs text-slate-400">Client: Bank Negara Malaysia | Central Bank | 2 Years</p>
+                    </div>
+                    <div class="bg-slate-50 px-6 py-4 border-t border-slate-100">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs font-semibold rounded">QRadar</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded">UEBA</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 text-xs font-semibold rounded">Waterfall</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8: Industry 4.0 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-48 bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center text-white">
+                        <svg class="w-16 h-16 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="px-2 py-0.5 bg-violet-100 text-violet-700 text-xs font-semibold rounded">IoT</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-brand-navy mb-2">2D Matrix Code - Industry 4.0</h4>
+                        <p class="text-slate-600 text-sm mb-3 leading-relaxed">Implemented 2D matrix codes on lenses enabling Industry 4.0 capabilities: product traceability, automated warehouse scanning, and manufacturing process optimization.</p>
+                        <p class="text-xs text-slate-400">Client: Carl Zeiss | Manufacturing | China</p>
+                    </div>
+                    <div class="bg-slate-50 px-6 py-4 border-t border-slate-100">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-violet-100 text-violet-800 text-xs font-semibold rounded">Industry 4.0</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded">IoT</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded">WMS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9: Guardium DAM -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-48 bg-gradient-to-br from-slate-600 to-slate-800 flex items-center justify-center text-white">
+                        <svg class="w-16 h-16 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="px-2 py-0.5 bg-slate-200 text-slate-700 text-xs font-semibold rounded">1 Year</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-brand-navy mb-2">IBM Guardium DAM</h4>
+                        <p class="text-slate-600 text-sm mb-3 leading-relaxed">Implemented Database Activity Monitoring for Tenaga Nasional Berhad (Malaysia's electricity utility), ensuring data protection and regulatory compliance.</p>
+                        <p class="text-xs text-slate-400">Client: Tenaga Nasional Berhad | Electricity</p>
+                    </div>
+                    <div class="bg-slate-50 px-6 py-4 border-t border-slate-100">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-slate-200 text-slate-800 text-xs font-semibold rounded">Guardium</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded">DAM</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 text-xs font-semibold rounded">Compliance</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Certifications Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center text-brand-navy mb-12">Skills & Certifications</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+                <!-- Methodologies -->
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-100">
+                    <div class="w-12 h-12 bg-brand-navy rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-navy mb-3">Methodologies</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-blue-100 text-blue-800">Agile/Scrum</span>
+                        <span class="skill-tag bg-blue-100 text-blue-800">Kanban</span>
+                        <span class="skill-tag bg-blue-100 text-blue-800">Waterfall</span>
+                        <span class="skill-tag bg-blue-100 text-blue-800">SDLC</span>
+                        <span class="skill-tag bg-blue-100 text-blue-800">PRINCE2</span>
+                        <span class="skill-tag bg-blue-100 text-blue-800">PMI/PMP</span>
+                        <span class="skill-tag bg-blue-100 text-blue-800">ITIL</span>
+                        <span class="skill-tag bg-blue-100 text-blue-800">Six Sigma</span>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity -->
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-100">
+                    <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-navy mb-3">Cybersecurity</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-red-100 text-red-800">Zero Trust</span>
+                        <span class="skill-tag bg-red-100 text-red-800">SIEM/QRadar</span>
+                        <span class="skill-tag bg-red-100 text-red-800">IAM/SSO/MFA</span>
+                        <span class="skill-tag bg-red-100 text-red-800">PAM</span>
+                        <span class="skill-tag bg-red-100 text-red-800">DAM</span>
+                        <span class="skill-tag bg-red-100 text-red-800">VAPT</span>
+                        <span class="skill-tag bg-red-100 text-red-800">EPP/EDR</span>
+                    </div>
+                </div>
+
+                <!-- Cloud & Infrastructure -->
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-100">
+                    <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-navy mb-3">Cloud & Infrastructure</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-orange-100 text-orange-800">AWS</span>
+                        <span class="skill-tag bg-orange-100 text-orange-800">Azure</span>
+                        <span class="skill-tag bg-orange-100 text-orange-800">Data Center</span>
+                        <span class="skill-tag bg-orange-100 text-orange-800">DR Planning</span>
+                        <span class="skill-tag bg-orange-100 text-orange-800">Virtualization</span>
+                        <span class="skill-tag bg-orange-100 text-orange-800">IPv6</span>
+                    </div>
+                </div>
+
+                <!-- Compliance -->
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-100">
+                    <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-navy mb-3">Compliance & Governance</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-green-100 text-green-800">MAS TRM</span>
+                        <span class="skill-tag bg-green-100 text-green-800">RMIT</span>
+                        <span class="skill-tag bg-green-100 text-green-800">ISO 27001</span>
+                        <span class="skill-tag bg-green-100 text-green-800">NIST</span>
+                        <span class="skill-tag bg-green-100 text-green-800">GDPR/PDPA</span>
+                        <span class="skill-tag bg-green-100 text-green-800">SOC2</span>
+                        <span class="skill-tag bg-green-100 text-green-800">PCI DSS</span>
+                    </div>
+                </div>
+
+                <!-- FinTech -->
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-100">
+                    <div class="w-12 h-12 bg-emerald-600 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-navy mb-3">FinTech & E-Invoicing</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-emerald-100 text-emerald-800">Peppol</span>
+                        <span class="skill-tag bg-emerald-100 text-emerald-800">InvoiceNow</span>
+                        <span class="skill-tag bg-emerald-100 text-emerald-800">ISO 20022</span>
+                        <span class="skill-tag bg-emerald-100 text-emerald-800">PayNow</span>
+                        <span class="skill-tag bg-emerald-100 text-emerald-800">GIRO/MEPS</span>
+                        <span class="skill-tag bg-emerald-100 text-emerald-800">FAST</span>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-100">
+                    <div class="w-12 h-12 bg-slate-600 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-navy mb-3">Tools & Platforms</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-slate-200 text-slate-800">JIRA</span>
+                        <span class="skill-tag bg-slate-200 text-slate-800">MS Project</span>
+                        <span class="skill-tag bg-slate-200 text-slate-800">Power BI</span>
+                        <span class="skill-tag bg-slate-200 text-slate-800">MS Visio</span>
+                        <span class="skill-tag bg-slate-200 text-slate-800">SAP</span>
+                        <span class="skill-tag bg-slate-200 text-slate-800">Oracle</span>
+                        <span class="skill-tag bg-slate-200 text-slate-800">NetSuite</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Certifications -->
+            <div class="mt-12 max-w-4xl mx-auto">
+                <h4 class="text-xl font-bold text-center text-brand-navy mb-6">Certifications</h4>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="px-4 py-2 bg-purple-100 text-purple-800 rounded-lg font-medium text-sm">PRINCE2 Practitioner</span>
+                    <span class="px-4 py-2 bg-purple-100 text-purple-800 rounded-lg font-medium text-sm">ITIL Foundation</span>
+                    <span class="px-4 py-2 bg-orange-100 text-orange-800 rounded-lg font-medium text-sm">AWS Architecting</span>
+                    <span class="px-4 py-2 bg-orange-100 text-orange-800 rounded-lg font-medium text-sm">AWS Security Engineering</span>
+                    <span class="px-4 py-2 bg-orange-100 text-orange-800 rounded-lg font-medium text-sm">AWS DevOps Engineering</span>
+                    <span class="px-4 py-2 bg-red-100 text-red-800 rounded-lg font-medium text-sm">IBM QRadar SIEM V7.1</span>
+                    <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-lg font-medium text-sm">IPv6 Network Engineer (Silver)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Languages Section -->
+    <section id="education" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <!-- Education -->
+                    <div class="bg-white rounded-xl p-8 border border-slate-100 shadow-sm">
+                        <div class="w-12 h-12 bg-brand-navy rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-navy mb-4">Education</h3>
+                        <h4 class="text-lg font-semibold text-slate-700">B.Sc. (Hons) in Business Information Systems</h4>
+                        <p class="text-slate-500 mt-1">Majoring in Information Technology</p>
+                        <p class="text-slate-600 mt-3 text-sm">Asia Pacific University (APU), Malaysia</p>
+                        <p class="text-slate-600 text-sm">Staffordshire University, UK</p>
+                        <div class="mt-4 inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                            Honours - CGPA: 3.21
+                        </div>
+                    </div>
+
+                    <!-- Languages -->
+                    <div class="bg-white rounded-xl p-8 border border-slate-100 shadow-sm">
+                        <div class="w-12 h-12 bg-brand-navy rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-navy mb-4">Languages</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-700 font-medium">English</span>
+                                <span class="text-sm text-slate-500">Native / Bilingual</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-brand-navy h-2 rounded-full" style="width: 100%"></div>
+                            </div>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-slate-700 font-medium">Tamil</span>
+                                <span class="text-sm text-slate-500">Native / Bilingual</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-brand-navy h-2 rounded-full" style="width: 100%"></div>
+                            </div>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-slate-700 font-medium">Bahasa Malaysia</span>
+                                <span class="text-sm text-slate-500">Full Professional</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-brand-navy h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-slate-700 font-medium">German</span>
+                                <span class="text-sm text-slate-500">Elementary</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-brand-navy h-2 rounded-full" style="width: 25%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-2xl font-bold text-center text-brand-navy mb-10">Industries Served</h3>
+            <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+                <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 font-medium text-sm shadow-sm">Banking</span>
+                <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 font-medium text-sm shadow-sm">Insurance</span>
+                <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 font-medium text-sm shadow-sm">FinTech</span>
+                <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 font-medium text-sm shadow-sm">Manufacturing</span>
+                <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 font-medium text-sm shadow-sm">Aviation</span>
+                <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 font-medium text-sm shadow-sm">Telecommunications</span>
+                <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 font-medium text-sm shadow-sm">Government</span>
+                <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 font-medium text-sm shadow-sm">Hospitality</span>
+                <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 font-medium text-sm shadow-sm">Medical</span>
+                <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 font-medium text-sm shadow-sm">ICT</span>
+                <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 font-medium text-sm shadow-sm">Electricity/Utilities</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-brand-navy text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h4 class="text-3xl font-bold mb-4">Let's Connect</h4>
+                <p class="text-blue-200 mb-8 text-lg">Based in Singapore | Available for regional IT leadership roles across APAC</p>
+
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-10">
+                    <a href="mailto:pravenkummar@pm.me" class="flex items-center gap-2 text-white hover:text-blue-200 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        pravenkummar@pm.me
+                    </a>
+                    <a href="https://linkedin.com/in/pravenkummar" target="_blank" class="flex items-center gap-2 text-white hover:text-blue-200 transition">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        linkedin.com/in/pravenkummar
+                    </a>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-4 mb-10">
+                    <span class="px-3 py-1 bg-white/10 rounded text-sm">Singapore</span>
+                    <span class="px-3 py-1 bg-white/10 rounded text-sm">+65 9130 4748</span>
+                    <span class="px-3 py-1 bg-white/10 rounded text-sm">+60 102 649 288</span>
+                    <span class="px-3 py-1 bg-white/10 rounded text-sm">Employment Pass Holder</span>
+                </div>
+
+                <p class="text-blue-300 text-sm">&copy; 2026 Praven Kummar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
