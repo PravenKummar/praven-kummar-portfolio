@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Praven Kummar</title>
+    <meta name="description" content="Career timeline of Praven Kummar - 10+ years of IT project management across HP, Carl Zeiss, Techlab Security, Great Eastern Life, and DataPost.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💼</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                colors: { base: { DEFAULT: '#0a0f1a', light: '#0f172a', card: '#1e293b' }, accent: { blue: '#3b82f6', cyan: '#06b6d4' } },
+                fontFamily: { display: ['"Plus Jakarta Sans"', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+            }}
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-base text-slate-100 font-body">
+
+    <!-- Header -->
+    <header id="siteHeader" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent">
+        <div class="container mx-auto px-6 py-5 flex justify-between items-center transition-all duration-300">
+            <a href="index.html" class="text-xl font-display font-bold text-white tracking-tight">PK</a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-sm text-slate-400 hover:text-white font-medium transition duration-200">Home</a>
+                <a href="experience.html" class="text-sm text-white font-medium transition duration-200">Experience</a>
+                <a href="projects.html" class="text-sm text-slate-400 hover:text-white font-medium transition duration-200">Projects</a>
+                <a href="about.html" class="text-sm text-slate-400 hover:text-white font-medium transition duration-200">About</a>
+                <a href="about.html#contact" class="text-sm bg-accent-blue/10 text-accent-blue hover:bg-accent-blue/20 px-4 py-2 rounded-lg font-medium transition duration-200 border border-accent-blue/20">Get in Touch</a>
+            </nav>
+            <button id="menuBtn" class="md:hidden text-white focus:outline-none" aria-label="Toggle Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden glass px-6 py-4">
+            <a href="index.html" class="block py-2.5 text-slate-400 hover:text-white transition">Home</a>
+            <a href="experience.html" class="block py-2.5 text-white font-medium">Experience</a>
+            <a href="projects.html" class="block py-2.5 text-slate-400 hover:text-white transition">Projects</a>
+            <a href="about.html" class="block py-2.5 text-slate-400 hover:text-white transition">About</a>
+            <a href="about.html#contact" class="block py-2.5 text-accent-blue font-medium">Get in Touch</a>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header bg-base">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center gap-3 mb-2" data-aos="fade-up">
+                    <span class="h-px w-8 bg-accent-blue"></span>
+                    <span class="text-accent-blue text-xs font-semibold tracking-wider uppercase">Career</span>
+                </div>
+                <h1 class="font-display text-4xl md:text-5xl font-extrabold text-white mb-4" data-aos="fade-up">Professional Experience</h1>
+                <p class="text-slate-400 text-lg max-w-2xl" data-aos="fade-up">A decade of delivering complex IT projects from both vendor and end-user perspectives across APAC & Europe.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="py-16 bg-base">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto relative timeline-line space-y-10">
+
+                <!-- DataPost -->
+                <div class="relative z-10 pl-14" data-aos="fade-up">
+                    <div class="absolute left-[18px] top-1.5 w-4 h-4 bg-green-500 border-2 border-base rounded-full timeline-dot-current z-10"></div>
+                    <div class="glass card-glow rounded-xl p-7 relative">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-5">
+                            <div>
+                                <h2 class="font-display text-xl font-bold text-white">DataPost Pte Ltd</h2>
+                                <p class="text-slate-400 font-medium">Regional IT Project Manager</p>
+                                <p class="text-xs text-slate-500 mt-1">Singapore</p>
+                            </div>
+                            <div class="flex items-center gap-2 flex-shrink-0">
+                                <span class="flex items-center gap-1.5 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-green-400 glass-light rounded-full">
+                                    <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
+                                    Current
+                                </span>
+                                <span class="text-xs text-slate-500">Jan 2024 &ndash; Present</span>
+                            </div>
+                        </div>
+                        <ul class="text-slate-300 text-sm leading-relaxed space-y-2.5 mb-5">
+                            <li>Directed E2E development and deployment of white-label SaaS InvoiceNow solution for <strong class="text-white">CIMB and OCBC</strong>, managing full project lifecycle including AR/AP process integration and payment gateway implementation (GIRO, PayNow, MEPS, FAST, TT) compliant with ISO 20022MX standards. Overseeing <strong class="text-white">10 technical + 6 operations</strong> team members.</li>
+                            <li>Spearheaded Agile integration projects for <strong class="text-white">Acer, Mapletree, Singtel, Diners Club, SPH, OCBC</strong> using FTP, SFTP, FTPS and APIs to enable automated data exchange with diverse ERPs (Oracle, NetSuite, Dynamics).</li>
+                            <li><strong class="text-white">Single-handedly</strong> achieved Peppol Service Provider accreditation for Malaysia entity &mdash; managed SSM registration, obtained PosDigicert Softcert, completed LHDN registration, and secured accreditation from MDEC.</li>
+                            <li>Leading compliance coordination for Singapore (InvoiceNow &mdash; PINT & C5) and Malaysia (MyInvoice &mdash; LHDN & MDEC), translating technical requirements and managing compliance testing with OpenPeppol, IMDA, IRAS, MDEC, and LHDN.</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag bg-blue-500/10 text-blue-300 border border-blue-500/20">Peppol</span>
+                            <span class="skill-tag bg-green-500/10 text-green-300 border border-green-500/20">AWS (EKS, RDS, S3)</span>
+                            <span class="skill-tag bg-purple-500/10 text-purple-300 border border-purple-500/20">Java/Spring Boot</span>
+                            <span class="skill-tag bg-orange-500/10 text-orange-300 border border-orange-500/20">ISO 20022</span>
+                            <span class="skill-tag bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">React</span>
+                            <span class="skill-tag bg-yellow-500/10 text-yellow-300 border border-yellow-500/20">Microservices (DDD)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Great Eastern -->
+                <div class="relative z-10 pl-14" data-aos="fade-up">
+                    <div class="absolute left-[18px] top-1.5 w-4 h-4 bg-accent-blue border-2 border-base rounded-full timeline-dot z-10"></div>
+                    <div class="glass card-glow rounded-xl p-7">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-5">
+                            <div>
+                                <h2 class="font-display text-xl font-bold text-white">Great Eastern Life Sdn Bhd</h2>
+                                <p class="text-slate-400 font-medium">Vice President, IT Project Manager</p>
+                                <p class="text-xs text-slate-500 mt-1">Kuala Lumpur, Malaysia</p>
+                            </div>
+                            <span class="text-xs text-slate-500 flex-shrink-0">May 2021 &ndash; Dec 2023</span>
+                        </div>
+                        <ul class="text-slate-300 text-sm leading-relaxed space-y-2.5 mb-5">
+                            <li>Enhanced regional security posture across <strong class="text-white">5 countries</strong> by directing E2E deployment of critical endpoint, server, and mobile security solutions covering <strong class="text-white">~8,000 endpoints</strong> and <strong class="text-white">~550 servers</strong>.</li>
+                            <li>Managed procurement (RFI/RFQ/RFP) for security solutions valued at approximately <strong class="text-white">$2M USD</strong>, including McAfee Endpoint, Carbon Black, Symantec Replacement, and Zimperium Mobile Security.</li>
+                            <li>Implemented comprehensive cybersecurity strategies incorporating Zero Trust principles and cloud security roadmaps, ensuring compliance with MAS TRM (Singapore) and RMiT (Malaysia) and OCBC parent company requirements.</li>
+                            <li>Strengthened organizational security governance and elevated security awareness through targeted training programs reaching business units across Malaysia and Singapore, applying Prosci/ADKAR change management principles.</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag bg-red-500/10 text-red-300 border border-red-500/20">Cybersecurity</span>
+                            <span class="skill-tag bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">Zero Trust</span>
+                            <span class="skill-tag bg-slate-500/10 text-slate-300 border border-slate-500/20">5 Countries</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Techlab -->
+                <div class="relative z-10 pl-14" data-aos="fade-up">
+                    <div class="absolute left-[18px] top-1.5 w-4 h-4 bg-accent-blue border-2 border-base rounded-full timeline-dot z-10"></div>
+                    <div class="glass card-glow rounded-xl p-7">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-5">
+                            <div>
+                                <h2 class="font-display text-xl font-bold text-white">Techlab Security Sdn Bhd</h2>
+                                <p class="text-slate-400 font-medium">IT Cyber Security Project Manager</p>
+                                <p class="text-xs text-slate-500 mt-1">Kuala Lumpur, Malaysia</p>
+                            </div>
+                            <span class="text-xs text-slate-500 flex-shrink-0">Apr 2019 &ndash; May 2021</span>
+                        </div>
+                        <ul class="text-slate-300 text-sm leading-relaxed space-y-2.5 mb-5">
+                            <li>Managed <strong class="text-white">$10M USD</strong> IBM QRadar SIEM implementation for Bank Simpanan Nasional &mdash; 15 servers covering SIEM, UEBA, Network Insight, Packet Capture, and Resilient automation.</li>
+                            <li>Deployed QRadar SIEM for <strong class="text-white">Bank Negara Malaysia</strong> (26 servers, 2 years) and <strong class="text-white">Great Eastern Life</strong> (21 servers across MY, SG, Brunei, Indonesia, 2 years).</li>
+                            <li>Led 2-year Agile SSO project for <strong class="text-white">Malaysia Airlines</strong> &mdash; integrated 58 applications, improved user experience and reduced password-related helpdesk calls.</li>
+                            <li>Directed Agile Thycotic PAM implementation for <strong class="text-white">Genting Highlands</strong> &mdash; integrated 1,018 of 2,000 target servers, validated 411 of 621 applications over 5 years.</li>
+                            <li>Implemented IBM Guardium DAM for <strong class="text-white">Tenaga Nasional Berhad</strong>, ensuring data protection and regulatory compliance.</li>
+                            <li>Standardized internal E2E PM workflow, reducing project startup time and improving resource visibility across the organization.</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag bg-purple-500/10 text-purple-300 border border-purple-500/20">QRadar</span>
+                            <span class="skill-tag bg-orange-500/10 text-orange-300 border border-orange-500/20">PAM</span>
+                            <span class="skill-tag bg-blue-500/10 text-blue-300 border border-blue-500/20">SSO</span>
+                            <span class="skill-tag bg-green-500/10 text-green-300 border border-green-500/20">DAM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carl Zeiss -->
+                <div class="relative z-10 pl-14" data-aos="fade-up">
+                    <div class="absolute left-[18px] top-1.5 w-4 h-4 bg-accent-blue border-2 border-base rounded-full timeline-dot z-10"></div>
+                    <div class="glass card-glow rounded-xl p-7">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-5">
+                            <div>
+                                <h2 class="font-display text-xl font-bold text-white">Carl Zeiss Pte Ltd</h2>
+                                <p class="text-slate-400 font-medium">IT Project Manager, APAC Region</p>
+                                <p class="text-xs text-slate-500 mt-1">Singapore</p>
+                            </div>
+                            <span class="text-xs text-slate-500 flex-shrink-0">Mar 2017 &ndash; Apr 2019</span>
+                        </div>
+                        <ul class="text-slate-300 text-sm leading-relaxed space-y-2.5 mb-5">
+                            <li>Achieved <strong class="text-white">&euro;80,442</strong> annual cost savings by automating the global order confirmation report, eliminating manual customer service effort and errors.</li>
+                            <li>Spearheaded Agile development and rollout of the <strong class="text-white">Lens Order Database (LODB)</strong> across 8 APAC countries, integrating local ERPs (AS400, U8, Raku Raku, VisuStore, PCS, LabPro) with Microsoft Azure.</li>
+                            <li>Upgraded 7 critical business interfaces (VisuStore, Clearing Center, Blacklist, LODB, Cesar, SF Express, Customer Order Entry) to Microsoft Cloud.</li>
+                            <li>Implemented Customer Blacklist system across China & Hong Kong, preventing sales to restricted/blacklisted entities including Interpol lists via SAP ABAP & U8 ERP integration.</li>
+                            <li>Deployed 2D Matrix Code on lenses (Phase 1, China) enabling Industry 4.0 capabilities: product traceability, automated warehouse scanning, and manufacturing process optimization.</li>
+                            <li>Delivered LOI Tool for automated order verification &mdash; validating parameters, checking stock availability, and confirming pricing across multiple ERPs.</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag bg-blue-500/10 text-blue-300 border border-blue-500/20">Azure</span>
+                            <span class="skill-tag bg-green-500/10 text-green-300 border border-green-500/20">SAP</span>
+                            <span class="skill-tag bg-purple-500/10 text-purple-300 border border-purple-500/20">Industry 4.0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HP -->
+                <div class="relative z-10 pl-14" data-aos="fade-up">
+                    <div class="absolute left-[18px] top-1.5 w-4 h-4 bg-accent-blue border-2 border-base rounded-full timeline-dot z-10"></div>
+                    <div class="glass card-glow rounded-xl p-7">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-5">
+                            <div>
+                                <h2 class="font-display text-xl font-bold text-white">Hewlett-Packard (HP) Sdn Bhd</h2>
+                                <p class="text-slate-400 font-medium">IT Project Executive & System Analyst</p>
+                                <p class="text-xs text-slate-500 mt-1">Cyberjaya, Malaysia</p>
+                            </div>
+                            <span class="text-xs text-slate-500 flex-shrink-0">May 2014 &ndash; Mar 2017</span>
+                        </div>
+                        <ul class="text-slate-300 text-sm leading-relaxed space-y-2.5 mb-5">
+                            <li>Supported HPE/HPI global Active Directory split</li>
+                            <li>Office 365 / M365 platform migration</li>
+                            <li>Lotus Notes decommissioning & replacement</li>
+                            <li><strong class="text-white">Best Performing Employee of the Year 2015</strong></li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag bg-blue-500/10 text-blue-300 border border-blue-500/20">M365</span>
+                            <span class="skill-tag bg-slate-500/10 text-slate-300 border border-slate-500/20">Active Directory</span>
+                            <span class="skill-tag bg-yellow-500/10 text-yellow-300 border border-yellow-500/20">Award Winner</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-base-light">
+        <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+            <p class="text-slate-400 mb-6">Want to see the projects behind this experience?</p>
+            <a href="projects.html" class="inline-flex items-center gap-2 bg-accent-blue hover:bg-blue-600 text-white px-8 py-3.5 rounded-lg font-semibold transition duration-300 shadow-lg shadow-blue-500/20">
+                View Project Portfolio
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative bg-base py-16 border-t border-white/5">
+        <div class="footer-glow"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+                <div>
+                    <p class="font-display font-bold text-white text-lg">Praven Kummar</p>
+                    <p class="text-slate-500 text-sm">Regional IT Project Manager &middot; Singapore</p>
+                </div>
+                <div class="flex items-center gap-6">
+                    <a href="mailto:pravenkummar@pm.me" class="text-slate-400 hover:text-accent-blue transition" title="Email">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </a>
+                    <a href="https://linkedin.com/in/pravenkummar" target="_blank" class="text-slate-400 hover:text-accent-blue transition" title="LinkedIn">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <span class="text-slate-600">|</span>
+                    <p class="text-slate-600 text-sm">&copy; 2026</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

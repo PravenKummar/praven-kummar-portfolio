@@ -1,0 +1,123 @@
+/* ============================================================
+   Shared styles for all pages
+   ============================================================ */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0a0f1a;
+    color: #f1f5f9;
+}
+
+.font-display { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+/* Glass morphism */
+.glass {
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.glass-light {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Header */
+.header-scrolled {
+    background: rgba(10, 15, 26, 0.9) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Timeline */
+.timeline-line::before {
+    content: '';
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #3b82f6, #0f172a);
+    z-index: 0;
+}
+.timeline-dot {
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.5);
+}
+.timeline-dot-current {
+    box-shadow: 0 0 12px rgba(34, 197, 94, 0.5);
+}
+
+/* Skill tags */
+.skill-tag {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 9999px;
+}
+
+/* Card hover glow */
+.card-glow { transition: all 0.3s ease; }
+.card-glow:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 4px 30px rgba(59, 130, 246, 0.08);
+    transform: translateY(-2px);
+}
+
+/* Left accent stripes */
+.stripe-red { border-left: 3px solid #ef4444; }
+.stripe-green { border-left: 3px solid #10b981; }
+.stripe-indigo { border-left: 3px solid #6366f1; }
+.stripe-sky { border-left: 3px solid #0ea5e9; }
+.stripe-amber { border-left: 3px solid #f59e0b; }
+.stripe-cyan { border-left: 3px solid #06b6d4; }
+.stripe-rose { border-left: 3px solid #f43f5e; }
+.stripe-violet { border-left: 3px solid #8b5cf6; }
+.stripe-slate { border-left: 3px solid #64748b; }
+
+/* Hero glow */
+.hero-glow {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 500px;
+    background: radial-gradient(ellipse, rgba(59, 130, 246, 0.08) 0%, rgba(6, 182, 212, 0.04) 40%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Footer glow */
+.footer-glow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 200px;
+    background: radial-gradient(ellipse, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Progress bar */
+.progress-gradient {
+    background: linear-gradient(to right, #3b82f6, #06b6d4);
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
+}
+
+/* Section divider */
+.section-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent);
+}
+
+/* Page header (non-home pages) */
+.page-header {
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+}
+
+html { scroll-behavior: smooth; }
+::selection { background: rgba(59, 130, 246, 0.3); color: #f1f5f9; }
