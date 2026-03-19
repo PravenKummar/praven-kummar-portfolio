@@ -11,10 +11,10 @@
 
 | Item | URL |
 |------|-----|
-| **Live Site** | https://pravenkummar.github.io/praven-kummar-portfolio/ |
+| **Live Site** | https://praven-kummar-portfolio.vercel.app/ |
 | **GitHub Repo** | https://github.com/PravenKummar/praven-kummar-portfolio |
-| **Download CV** | https://pravenkummar.github.io/praven-kummar-portfolio/Praven-Kummar-Resume.pdf |
-| **Sitemap** | https://pravenkummar.github.io/praven-kummar-portfolio/sitemap.xml |
+| **Download CV** | https://praven-kummar-portfolio.vercel.app/Praven-Kummar-Resume.pdf |
+| **Sitemap** | https://praven-kummar-portfolio.vercel.app/sitemap.xml |
 
 ---
 

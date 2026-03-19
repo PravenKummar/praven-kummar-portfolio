@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pravenkummar.github.io/praven-kummar-portfolio/sitemap.xml
+Sitemap: https://praven-kummar-portfolio.vercel.app/sitemap.xml
