@@ -12,17 +12,22 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://praven-kummar-portfolio.vercel.app/">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💼</text></svg>">
+    
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://praven-kummar-portfolio.vercel.app/">
     <meta property="og:title" content="Praven Kummar | Regional IT Project Manager">
     <meta property="og:description" content="Regional IT Project Manager with 10+ years experience delivering $10M+ cybersecurity, infrastructure, and enterprise solutions across 8 APAC countries.">
     <meta property="og:image" content="https://praven-kummar-portfolio.vercel.app/og-image.png">
     <meta property="og:locale" content="en_SG">
+    
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://praven-kummar-portfolio.vercel.app/">
     <meta name="twitter:title" content="Praven Kummar | Regional IT Project Manager">
     <meta name="twitter:description" content="Regional IT Project Manager with 10+ years experience delivering $10M+ cybersecurity, infrastructure, and enterprise solutions across 8 APAC countries.">
     <meta name="twitter:image" content="https://praven-kummar-portfolio.vercel.app/og-image.png">
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -31,344 +36,213 @@
         "jobTitle": "Regional IT Project Manager",
         "url": "https://pravenkummar.com",
         "email": "pravenkummar@outlook.com",
-
         "address": { "@type": "PostalAddress", "addressLocality": "Singapore", "addressCountry": "SG" },
-        "alumniOf": [
-            { "@type": "CollegeOrUniversity", "name": "Asia Pacific University (APU)" },
-            { "@type": "CollegeOrUniversity", "name": "Staffordshire University" }
-        ],
         "knowsAbout": ["IT Project Management", "Cybersecurity", "SIEM", "QRadar", "PAM", "CyberArk", "Peppol E-Invoicing", "Cloud Infrastructure", "WMS", "MES"],
         "worksFor": { "@type": "Organization", "name": "DataPost Pte Ltd" },
         "sameAs": ["https://www.linkedin.com/in/pravenkummar"]
     }
     </script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="bg-base text-slate-100 font-body">
+<body class="bg-background text-foreground font-body antialiased">
 
     <!-- Header -->
     <header id="siteHeader" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent">
-        <div class="container mx-auto px-6 py-5 flex justify-between items-center transition-all duration-300">
-            <a href="index.html" class="text-xl font-display font-bold text-white tracking-tight">PK</a>
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="text-sm text-white font-medium transition duration-200">Home</a>
-                <a href="experience.html" class="text-sm text-slate-400 hover:text-white font-medium transition duration-200">Experience</a>
-                <a href="projects.html" class="text-sm text-slate-400 hover:text-white font-medium transition duration-200">Projects</a>
-                <a href="about.html" class="text-sm text-slate-400 hover:text-white font-medium transition duration-200">About</a>
-                <a href="about.html#contact" class="text-sm bg-accent-blue/10 text-accent-blue hover:bg-accent-blue/20 px-4 py-2 rounded-lg font-medium transition duration-200 border border-accent-blue/20">Get in Touch</a>
+        <div class="container mx-auto px-6 py-6 flex justify-between items-center transition-all duration-300">
+            <a href="index.html" class="text-xl font-display font-semibold text-foreground tracking-tight">PK</a>
+            <nav class="hidden md:flex items-center space-x-10">
+                <a href="index.html" class="text-sm text-foreground font-medium transition-colors">Home</a>
+                <a href="experience.html" class="text-sm text-muted-foreground hover:text-foreground font-medium transition-colors">Experience</a>
+                <a href="projects.html" class="text-sm text-muted-foreground hover:text-foreground font-medium transition-colors">Projects</a>
+                <a href="about.html" class="text-sm text-muted-foreground hover:text-foreground font-medium transition-colors">About</a>
+                <a href="about.html#contact" class="text-sm border border-border px-5 py-2 rounded-full font-medium transition-all hover:bg-foreground hover:text-background">Get in Touch</a>
             </nav>
-            <button id="menuBtn" class="md:hidden text-white focus:outline-none" aria-label="Toggle Menu">
+            <button id="menuBtn" class="md:hidden text-foreground focus:outline-none" aria-label="Toggle Menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
         </div>
-        <div id="mobileMenu" class="hidden md:hidden glass px-6 py-4">
-            <a href="index.html" class="block py-2.5 text-white font-medium">Home</a>
-            <a href="experience.html" class="block py-2.5 text-slate-400 hover:text-white transition">Experience</a>
-            <a href="projects.html" class="block py-2.5 text-slate-400 hover:text-white transition">Projects</a>
-            <a href="about.html" class="block py-2.5 text-slate-400 hover:text-white transition">About</a>
-            <a href="about.html#contact" class="block py-2.5 text-accent-blue font-medium">Get in Touch</a>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden glass px-6 py-6 border-b border-border">
+            <nav class="flex flex-col space-y-4">
+                <a href="index.html" class="text-lg text-foreground font-medium">Home</a>
+                <a href="experience.html" class="text-lg text-muted-foreground font-medium">Experience</a>
+                <a href="projects.html" class="text-lg text-muted-foreground font-medium">Projects</a>
+                <a href="about.html" class="text-lg text-muted-foreground font-medium">About</a>
+                <a href="about.html#contact" class="text-lg text-accent font-medium">Get in Touch</a>
+            </nav>
         </div>
     </header>
 
-    <!-- ============================================================ -->
     <!-- HERO -->
-    <!-- ============================================================ -->
-    <section class="relative min-h-[95vh] flex items-center overflow-hidden">
+    <section class="relative min-h-screen flex items-center overflow-hidden">
         <div class="hero-glow"></div>
-        <div class="container mx-auto px-6 relative z-10 py-32">
+        <div class="container mx-auto px-6 relative z-10 pt-20">
             <div class="max-w-4xl">
-                <div class="flex items-center gap-3 mb-8" data-aos="fade-up">
-                    <span class="h-px w-12 bg-accent-blue"></span>
-                    <span class="text-accent-blue text-sm font-semibold tracking-wider uppercase">Regional IT Project Manager</span>
+                <div class="flex items-center gap-4 mb-8" data-aos="fade-up">
+                    <div class="h-[1px] w-8 bg-accent"></div>
+                    <span class="text-accent text-xs font-semibold tracking-widest uppercase">Regional IT Project Manager</span>
                 </div>
 
-                <h1 class="font-display text-5xl md:text-7xl font-extrabold text-white mb-6 leading-[1.05] tracking-tight" data-aos="fade-up" data-aos-delay="100">
-                    Praven<br/>Kummar
+                <h1 class="font-display text-6xl md:text-8xl font-bold text-foreground mb-8 leading-[1.1] tracking-tightest" data-aos="fade-up" data-aos-delay="100">
+                    Praven<br/><span class="text-muted-foreground">Kummar</span>
                 </h1>
 
-                <p class="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl leading-relaxed font-light" data-aos="fade-up" data-aos-delay="200">
+                <p class="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl leading-relaxed font-light" data-aos="fade-up" data-aos-delay="200">
                     10+ years delivering complex IT projects across APAC & Europe.
                     Specialized in Cybersecurity, Peppol E-Invoicing, Cloud Infrastructure, and Enterprise Solutions.
                 </p>
 
-                <!-- Stats -->
-                <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12" data-aos="fade-up" data-aos-delay="300">
-                    <div class="glass-light rounded-xl px-4 py-4 text-center">
-                        <div class="text-2xl md:text-3xl font-display font-bold text-white">$<span class="counter" data-target="10">0</span>M</div>
-                        <div class="text-slate-500 text-[11px] uppercase tracking-wider mt-1 font-medium">Largest Project</div>
+                <!-- Stats - Minimal Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-px bg-border/20 rounded-2xl overflow-hidden mb-12" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-background/40 backdrop-blur-sm p-6 flex flex-col items-center justify-center">
+                        <div class="text-2xl md:text-3xl font-display font-semibold text-foreground">$<span class="counter" data-target="10">0</span>M</div>
+                        <div class="text-muted-foreground text-[10px] uppercase tracking-widest mt-2">Largest Project</div>
                     </div>
-                    <div class="glass-light rounded-xl px-4 py-4 text-center">
-                        <div class="text-2xl md:text-3xl font-display font-bold text-white"><span class="counter" data-target="70">0</span>+</div>
-                        <div class="text-slate-500 text-[11px] uppercase tracking-wider mt-1 font-medium">Projects Delivered</div>
+                    <div class="bg-background/40 backdrop-blur-sm p-6 flex flex-col items-center justify-center">
+                        <div class="text-2xl md:text-3xl font-display font-semibold text-foreground"><span class="counter" data-target="90">0</span>+</div>
+                        <div class="text-muted-foreground text-[10px] uppercase tracking-widest mt-2">Delivered</div>
                     </div>
-                    <div class="glass-light rounded-xl px-4 py-4 text-center">
-                        <div class="text-2xl md:text-3xl font-display font-bold text-white"><span class="counter" data-target="1000" data-separator="true">0</span>+</div>
-                        <div class="text-slate-500 text-[11px] uppercase tracking-wider mt-1 font-medium">Servers Managed</div>
+                    <div class="bg-background/40 backdrop-blur-sm p-6 flex flex-col items-center justify-center">
+                        <div class="text-2xl md:text-3xl font-display font-semibold text-foreground"><span class="counter" data-target="1284" data-separator="true">0</span></div>
+                        <div class="text-muted-foreground text-[10px] uppercase tracking-widest mt-2">Servers</div>
                     </div>
-                    <div class="glass-light rounded-xl px-4 py-4 text-center">
-                        <div class="text-2xl md:text-3xl font-display font-bold text-white"><span class="counter" data-target="8000" data-separator="true">0</span>+</div>
-                        <div class="text-slate-500 text-[11px] uppercase tracking-wider mt-1 font-medium">Endpoints Secured</div>
+                    <div class="bg-background/40 backdrop-blur-sm p-6 flex flex-col items-center justify-center">
+                        <div class="text-2xl md:text-3xl font-display font-semibold text-foreground"><span class="counter" data-target="10268" data-separator="true">0</span></div>
+                        <div class="text-muted-foreground text-[10px] uppercase tracking-widest mt-2">Endpoints</div>
                     </div>
-                    <div class="glass-light rounded-xl px-4 py-4 text-center">
-                        <div class="text-2xl md:text-3xl font-display font-bold text-white"><span class="counter" data-target="8">0</span></div>
-                        <div class="text-slate-500 text-[11px] uppercase tracking-wider mt-1 font-medium">APAC Countries</div>
+                    <div class="bg-background/40 backdrop-blur-sm p-6 flex flex-col items-center justify-center">
+                        <div class="text-2xl md:text-3xl font-display font-semibold text-foreground"><span class="counter" data-target="10">0</span></div>
+                        <div class="text-muted-foreground text-[10px] uppercase tracking-widest mt-2">Countries</div>
                     </div>
                 </div>
 
-                <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="400">
-                    <a href="projects.html" class="bg-accent-blue hover:bg-blue-600 text-white px-8 py-3.5 rounded-lg font-semibold transition duration-300 shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 text-center">
+                <div class="flex flex-wrap gap-6" data-aos="fade-up" data-aos-delay="400">
+                    <a href="projects.html" class="bg-foreground text-background px-10 py-4 rounded-full font-medium transition-transform hover:scale-105">
                         View Projects
                     </a>
-                    <a href="experience.html" class="glass-light hover:bg-white/10 text-white px-8 py-3.5 rounded-lg font-semibold transition duration-300 text-center">
+                    <a href="experience.html" class="border border-border text-foreground px-10 py-4 rounded-full font-medium transition-all hover:bg-muted/50">
                         Career Timeline
                     </a>
-                    <a href="Praven-Kummar-Resume.pdf" download target="_blank" class="glass-light hover:bg-white/10 text-white px-8 py-3.5 rounded-lg font-semibold transition duration-300 text-center">
-                        Download CV
-                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============================================================ -->
-    <!-- PROFESSIONAL SUMMARY -->
-    <!-- ============================================================ -->
-    <section class="py-24 bg-base-light">
+    <!-- SUMMARY SECTION -->
+    <section class="py-32 border-t border-border/50">
         <div class="container mx-auto px-6">
-            <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-12" data-aos="fade-up">
-                <div class="md:col-span-1">
-                    <div class="flex items-center gap-3 mb-2">
-                        <span class="h-px w-8 bg-accent-blue"></span>
-                        <span class="text-accent-blue text-xs font-semibold tracking-wider uppercase">Profile</span>
+            <div class="max-w-5xl mx-auto grid md:grid-cols-12 gap-16" data-aos="fade-up">
+                <div class="md:col-span-4">
+                    <div class="sticky top-32">
+                        <span class="text-accent text-xs font-semibold tracking-widest uppercase mb-4 block">Profile</span>
+                        <h2 class="font-display text-4xl font-semibold text-foreground leading-tight">Professional Summary</h2>
                     </div>
-                    <h2 class="font-display text-2xl font-bold text-white">Professional Summary</h2>
                 </div>
-                <div class="md:col-span-2">
-                    <p class="text-slate-300 leading-relaxed mb-4">
-                        A highly accomplished IT Project Manager with a decade of proven success delivering complex projects from both the <strong class="text-white">vendor (Service Integrator, Professional Services, Consultant)</strong> and <strong class="text-white">end-user</strong> perspectives. 7 years of experience directing regional projects across APAC and Europe, serving Banking, Insurance, FSI, FinTech, Telecommunications, Manufacturing, Medical, ICT, Aviation, Government and Hospitality.
+                <div class="md:col-span-8">
+                    <p class="text-xl text-muted-foreground leading-relaxed mb-8">
+                        A highly accomplished IT Project Manager with a decade of proven success delivering complex projects from both the <strong class="text-foreground">vendor</strong> and <strong class="text-foreground">end-user</strong> perspectives.
                     </p>
-                    <p class="text-slate-400 leading-relaxed mb-4">
-                        Key achievements include directing a $10M USD Cybersecurity project, driving critical software development, cloud and e-invoicing projects averaging $250K+ USD. Excels in C-level stakeholder engagement and vendor negotiation. Currently leading key initiatives in Singapore, ensuring IMDA/Peppol compliance.
+                    <p class="text-lg text-muted-foreground leading-relaxed mb-8">
+                        Directed major initiatives including a $10M USD Cybersecurity project and critical cloud/e-invoicing deployments. Currently leading key IMDA/Peppol compliance initiatives in Singapore.
                     </p>
-                    <p class="text-slate-400 leading-relaxed mb-8">
-                        Expertly leverages Agile (Scrum/Kanban), Waterfall (SDLC), PMI/PMP, and PRINCE2 principles to deliver high-value solutions.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1.5 glass-light rounded-lg text-slate-300 text-xs font-medium">Banking</span>
-                        <span class="px-3 py-1.5 glass-light rounded-lg text-slate-300 text-xs font-medium">Insurance</span>
-                        <span class="px-3 py-1.5 glass-light rounded-lg text-slate-300 text-xs font-medium">FinTech</span>
-                        <span class="px-3 py-1.5 glass-light rounded-lg text-slate-300 text-xs font-medium">Manufacturing</span>
-                        <span class="px-3 py-1.5 glass-light rounded-lg text-slate-300 text-xs font-medium">Aviation</span>
-                        <span class="px-3 py-1.5 glass-light rounded-lg text-slate-300 text-xs font-medium">Telecom</span>
-                        <span class="px-3 py-1.5 glass-light rounded-lg text-slate-300 text-xs font-medium">Government</span>
-                        <span class="px-3 py-1.5 glass-light rounded-lg text-slate-300 text-xs font-medium">Hospitality</span>
-                        <span class="px-3 py-1.5 glass-light rounded-lg text-slate-300 text-xs font-medium">Medical</span>
-                        <span class="px-3 py-1.5 glass-light rounded-lg text-slate-300 text-xs font-medium">Utilities</span>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 border border-border rounded-lg text-muted-foreground text-xs font-medium">Banking</span>
+                        <span class="px-4 py-2 border border-border rounded-lg text-muted-foreground text-xs font-medium">FinTech</span>
+                        <span class="px-4 py-2 border border-border rounded-lg text-muted-foreground text-xs font-medium">Aviation</span>
+                        <span class="px-4 py-2 border border-border rounded-lg text-muted-foreground text-xs font-medium">Government</span>
+                        <span class="px-4 py-2 border border-border rounded-lg text-muted-foreground text-xs font-medium">Medical</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="section-divider"></div>
-
-    <!-- ============================================================ -->
-    <!-- FEATURED PROJECTS (Preview - top 3) -->
-    <!-- ============================================================ -->
-    <section class="py-24 bg-base">
+    <!-- PROJECTS PREVIEW -->
+    <section class="py-32 bg-card/30">
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto">
-                <div class="flex items-center justify-between mb-12">
-                    <div>
-                        <div class="flex items-center gap-3 mb-2" data-aos="fade-up">
-                            <span class="h-px w-8 bg-accent-blue"></span>
-                            <span class="text-accent-blue text-xs font-semibold tracking-wider uppercase">Portfolio</span>
-                        </div>
-                        <h2 class="font-display text-3xl font-bold text-white" data-aos="fade-up">Featured Projects</h2>
+                <div class="flex items-end justify-between mb-20">
+                    <div class="max-w-2xl">
+                        <span class="text-accent text-xs font-semibold tracking-widest uppercase mb-4 block">Portfolio</span>
+                        <h2 class="font-display text-5xl font-semibold text-foreground mb-6" data-aos="fade-up">Featured Projects</h2>
+                        <p class="text-muted-foreground text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+                            A selection of high-impact regional projects delivered across various industries.
+                        </p>
                     </div>
-                    <a href="projects.html" class="hidden md:flex items-center gap-2 text-accent-blue hover:text-blue-400 text-sm font-medium transition" data-aos="fade-up">
-                        View all 9 projects
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    <a href="projects.html" class="hidden md:flex items-center gap-3 text-foreground hover:text-accent transition-colors group" data-aos="fade-up">
+                        <span class="text-sm font-medium">View all 9 projects</span>
+                        <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                     </a>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                    <!-- QRadar BSN -->
-                    <div class="glass card-glow rounded-xl p-6 stripe-red" data-aos="fade-up" data-aos-delay="0">
-                        <div class="flex items-center gap-2 mb-4">
-                            <span class="px-2.5 py-0.5 bg-red-500/10 text-red-300 text-xs font-bold rounded border border-red-500/20">$10M USD</span>
-                            <span class="px-2.5 py-0.5 glass-light text-slate-400 text-xs rounded">Banking</span>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- QRadar -->
+                    <div class="card-minimal rounded-2xl p-8" data-aos="fade-up" data-aos-delay="0">
+                        <div class="flex justify-between items-start mb-8">
+                            <span class="text-xs font-semibold text-accent uppercase tracking-widest">$10M USD</span>
+                            <span class="text-[10px] text-muted-foreground font-medium uppercase tracking-widest">Banking</span>
                         </div>
-                        <h3 class="font-display text-xl font-bold text-white mb-2">IBM QRadar SIEM &mdash; BSN</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-4">Enterprise SIEM for Bank Simpanan Nasional with 15 servers covering SIEM, UEBA, Network Insight, and automated security response.</p>
+                        <h3 class="font-display text-2xl font-semibold text-foreground mb-4">IBM QRadar SIEM</h3>
+                        <p class="text-muted-foreground text-sm leading-relaxed mb-8">Enterprise SIEM for Bank Simpanan Nasional with 15 servers covering UEBA and automated response.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-0.5 bg-purple-500/10 text-purple-300 text-[11px] rounded border border-purple-500/20">QRadar</span>
-                            <span class="px-2 py-0.5 bg-blue-500/10 text-blue-300 text-[11px] rounded border border-blue-500/20">SIEM</span>
-                            <span class="px-2 py-0.5 bg-slate-500/10 text-slate-300 text-[11px] rounded border border-slate-500/20">Waterfall</span>
+                            <span class="skill-tag">SIEM</span>
+                            <span class="skill-tag">Waterfall</span>
                         </div>
                     </div>
 
                     <!-- InvoiceNow -->
-                    <div class="glass card-glow rounded-xl p-6 stripe-green" data-aos="fade-up" data-aos-delay="100">
-                        <div class="flex items-center gap-2 mb-4">
-                            <span class="px-2.5 py-0.5 bg-green-500/10 text-green-300 text-xs font-bold rounded border border-green-500/20">Current</span>
-                            <span class="px-2.5 py-0.5 glass-light text-slate-400 text-xs rounded">FinTech</span>
+                    <div class="card-minimal rounded-2xl p-8" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex justify-between items-start mb-8">
+                            <span class="text-xs font-semibold text-emerald-500 uppercase tracking-widest">Current</span>
+                            <span class="text-[10px] text-muted-foreground font-medium uppercase tracking-widest">FinTech</span>
                         </div>
-                        <h3 class="font-display text-xl font-bold text-white mb-2">Cloud InvoiceNow SaaS</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-4">White-label e-invoicing for CIMB & OCBC using AWS, Java/Spring Boot microservices, React frontend. IMDA/IRAS compliant.</p>
+                        <h3 class="font-display text-2xl font-semibold text-foreground mb-4">Cloud InvoiceNow</h3>
+                        <p class="text-muted-foreground text-sm leading-relaxed mb-8">White-label e-invoicing for major banks using AWS microservices. IMDA/IRAS compliant.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-0.5 bg-yellow-500/10 text-yellow-300 text-[11px] rounded border border-yellow-500/20">AWS</span>
-                            <span class="px-2 py-0.5 bg-green-500/10 text-green-300 text-[11px] rounded border border-green-500/20">Peppol</span>
-                            <span class="px-2 py-0.5 bg-blue-500/10 text-blue-300 text-[11px] rounded border border-blue-500/20">Agile</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Agile</span>
                         </div>
                     </div>
 
                     <!-- Regional Security -->
-                    <div class="glass card-glow rounded-xl p-6 stripe-indigo" data-aos="fade-up" data-aos-delay="200">
-                        <div class="flex items-center gap-2 mb-4">
-                            <span class="px-2.5 py-0.5 bg-indigo-500/10 text-indigo-300 text-xs font-bold rounded border border-indigo-500/20">$2M USD</span>
-                            <span class="px-2.5 py-0.5 glass-light text-slate-400 text-xs rounded">5 Countries</span>
+                    <div class="card-minimal rounded-2xl p-8" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex justify-between items-start mb-8">
+                            <span class="text-xs font-semibold text-accent uppercase tracking-widest">$2M USD</span>
+                            <span class="text-[10px] text-muted-foreground font-medium uppercase tracking-widest">Infrastructure</span>
                         </div>
-                        <h3 class="font-display text-xl font-bold text-white mb-2">Regional Cybersecurity</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-4">McAfee, Carbon Black, Zimperium across ~8,000 endpoints and ~550 servers with Zero Trust architecture for Great Eastern Life.</p>
+                        <h3 class="font-display text-2xl font-semibold text-foreground mb-4">Regional Security</h3>
+                        <p class="text-muted-foreground text-sm leading-relaxed mb-8">Endpoint security rollout across 5 countries with Zero Trust architecture for GE Life.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-0.5 bg-indigo-500/10 text-indigo-300 text-[11px] rounded border border-indigo-500/20">Zero Trust</span>
-                            <span class="px-2 py-0.5 bg-red-500/10 text-red-300 text-[11px] rounded border border-red-500/20">Endpoint</span>
-                            <span class="px-2 py-0.5 bg-slate-500/10 text-slate-300 text-[11px] rounded border border-slate-500/20">MAS TRM</span>
+                            <span class="skill-tag">Zero Trust</span>
+                            <span class="skill-tag">Cybersecurity</span>
                         </div>
                     </div>
-                </div>
-
-                <div class="mt-8 md:hidden text-center">
-                    <a href="projects.html" class="inline-flex items-center gap-2 text-accent-blue hover:text-blue-400 text-sm font-medium transition">
-                        View all 9 projects
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="section-divider"></div>
-
-    <!-- ============================================================ -->
-    <!-- QUICK EXPERTISE OVERVIEW -->
-    <!-- ============================================================ -->
-    <section class="py-24 bg-base-light">
-        <div class="container mx-auto px-6">
-            <div class="max-w-6xl mx-auto">
-                <div class="flex items-center justify-between mb-12">
-                    <div>
-                        <div class="flex items-center gap-3 mb-2" data-aos="fade-up">
-                            <span class="h-px w-8 bg-accent-blue"></span>
-                            <span class="text-accent-blue text-xs font-semibold tracking-wider uppercase">Capabilities</span>
-                        </div>
-                        <h2 class="font-display text-3xl font-bold text-white" data-aos="fade-up">Core Expertise</h2>
-                    </div>
-                    <a href="about.html" class="hidden md:flex items-center gap-2 text-accent-blue hover:text-blue-400 text-sm font-medium transition" data-aos="fade-up">
-                        Full profile & certifications
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </a>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="glass card-glow rounded-xl p-6" data-aos="fade-up" data-aos-delay="0">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 bg-blue-500/15 rounded-lg flex items-center justify-center shadow-[0_0_12px_rgba(59,130,246,0.12)]">
-                                <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
-                            </div>
-                            <h4 class="font-display font-bold text-white">Methodologies</h4>
-                        </div>
-                        <p class="text-slate-400 text-sm leading-relaxed">Agile/Scrum, Kanban, Waterfall, SDLC, PRINCE2, PMI/PMP, ITIL, Six Sigma</p>
-                    </div>
-
-                    <div class="glass card-glow rounded-xl p-6" data-aos="fade-up" data-aos-delay="50">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 bg-red-500/15 rounded-lg flex items-center justify-center shadow-[0_0_12px_rgba(239,68,68,0.12)]">
-                                <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                            </div>
-                            <h4 class="font-display font-bold text-white">Cybersecurity</h4>
-                        </div>
-                        <p class="text-slate-400 text-sm leading-relaxed">Zero Trust, SIEM/QRadar, IAM/SSO/MFA, PAM, DAM, VAPT, EPP/EDR</p>
-                    </div>
-
-                    <div class="glass card-glow rounded-xl p-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 bg-orange-500/15 rounded-lg flex items-center justify-center shadow-[0_0_12px_rgba(249,115,22,0.12)]">
-                                <svg class="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
-                            </div>
-                            <h4 class="font-display font-bold text-white">Cloud & Infra</h4>
-                        </div>
-                        <p class="text-slate-400 text-sm leading-relaxed">AWS, Azure, Data Center, DR Planning, Virtualization, IPv6</p>
-                    </div>
-
-                    <div class="glass card-glow rounded-xl p-6" data-aos="fade-up" data-aos-delay="0">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 bg-green-500/15 rounded-lg flex items-center justify-center shadow-[0_0_12px_rgba(34,197,94,0.12)]">
-                                <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            </div>
-                            <h4 class="font-display font-bold text-white">Compliance</h4>
-                        </div>
-                        <p class="text-slate-400 text-sm leading-relaxed">MAS TRM, RMIT, ISO 27001, NIST, GDPR/PDPA, SOC2, PCI DSS</p>
-                    </div>
-
-                    <div class="glass card-glow rounded-xl p-6" data-aos="fade-up" data-aos-delay="50">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 bg-emerald-500/15 rounded-lg flex items-center justify-center shadow-[0_0_12px_rgba(16,185,129,0.12)]">
-                                <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            </div>
-                            <h4 class="font-display font-bold text-white">FinTech</h4>
-                        </div>
-                        <p class="text-slate-400 text-sm leading-relaxed">Peppol, InvoiceNow, ISO 20022, PayNow, GIRO/MEPS, FAST</p>
-                    </div>
-
-                    <div class="glass card-glow rounded-xl p-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 bg-slate-500/15 rounded-lg flex items-center justify-center shadow-[0_0_12px_rgba(100,116,139,0.12)]">
-                                <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            </div>
-                            <h4 class="font-display font-bold text-white">Tools</h4>
-                        </div>
-                        <p class="text-slate-400 text-sm leading-relaxed">JIRA, MS Project, Power BI, MS Visio, SAP, Oracle, NetSuite</p>
-                    </div>
-                </div>
-
-                <div class="mt-8 md:hidden text-center">
-                    <a href="about.html" class="inline-flex items-center gap-2 text-accent-blue hover:text-blue-400 text-sm font-medium transition">
-                        Full profile & certifications
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================ -->
     <!-- FOOTER -->
-    <!-- ============================================================ -->
-    <footer class="relative bg-base py-16 border-t border-white/5">
-        <div class="footer-glow"></div>
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+    <footer class="py-20 border-t border-border/50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
                 <div>
-                    <p class="font-display font-bold text-white text-lg">Praven Kummar</p>
-                    <p class="text-slate-500 text-sm">Regional IT Project Manager &middot; Singapore</p>
+                    <p class="font-display font-semibold text-foreground text-xl mb-2">Praven Kummar</p>
+                    <p class="text-muted-foreground text-sm">Regional IT Project Manager &middot; Singapore</p>
                 </div>
-                <div class="flex items-center gap-6">
-                    <a href="mailto:pravenkummar@pm.me" class="text-slate-400 hover:text-accent-blue transition" title="Email">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    </a>
-                    <a href="https://linkedin.com/in/pravenkummar" target="_blank" class="text-slate-400 hover:text-accent-blue transition" title="LinkedIn">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    </a>
-                    <span class="text-slate-600">|</span>
-                    <p class="text-slate-600 text-sm">&copy; 2026</p>
+                <div class="flex items-center gap-10">
+                    <a href="mailto:pravenkummar@pm.me" class="text-muted-foreground hover:text-foreground transition-colors">Email</a>
+                    <a href="https://linkedin.com/in/pravenkummar" target="_blank" class="text-muted-foreground hover:text-foreground transition-colors">LinkedIn</a>
+                    <span class="text-border">/</span>
+                    <p class="text-muted-foreground text-sm">&copy; 2026</p>
                 </div>
             </div>
         </div>

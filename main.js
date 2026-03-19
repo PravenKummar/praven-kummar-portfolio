@@ -17,17 +17,17 @@ if (header) {
         if (!ticking) {
             window.requestAnimationFrame(() => {
                 const inner = header.querySelector('div');
-                if (window.scrollY > 50) {
+                if (window.scrollY > 20) {
                     header.classList.add('header-scrolled');
                     if (inner) {
-                        inner.classList.remove('py-5');
-                        inner.classList.add('py-3');
+                        inner.classList.remove('py-6');
+                        inner.classList.add('py-4');
                     }
                 } else {
                     header.classList.remove('header-scrolled');
                     if (inner) {
-                        inner.classList.remove('py-3');
-                        inner.classList.add('py-5');
+                        inner.classList.remove('py-4');
+                        inner.classList.add('py-6');
                     }
                 }
                 ticking = false;
