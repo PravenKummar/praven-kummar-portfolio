@@ -35,7 +35,7 @@ Redesign praven-kummar-portfolio from a multi-page Tailwind site into a single-p
 - Large "Praven Kummar" display font, staggered letter animation on load
 - "Regional IT Project Manager" subtitle fades in after name
 - One-line positioning statement fades in last
-- Stats row: $10M / 90+ / 1,284 / 10,268 / 10 with counter animation
+- Stats row with counter animation: $10M (Largest Project) / 90+ (Delivered) / 1,284 (Servers) / 10,268 (Endpoints) / 10 (Countries)
 - Radial gradient glow follows mouse
 - Scroll-down chevron with bounce animation
 
@@ -49,13 +49,13 @@ Redesign praven-kummar-portfolio from a multi-page Tailwind site into a single-p
 ### 3. Impact Numbers (parallax)
 
 - Full-bleed dark section with dot-grid background pattern
-- 3 large animated data visualizations (circular progress rings or horizontal bars)
-- Numbers animate on scroll into view
+- 3 large animated horizontal progress bars showing different metrics than hero (e.g. project success rate, regional coverage, years of experience)
+- Numbers animate on scroll into view — distinct data from hero stats to avoid redundancy
 - Parallax: background at 0.5x scroll speed
 
 ### 4. Featured Projects
 
-- 3-4 flagship projects as staggered grid (2 cols desktop, 1 col mobile)
+- All projects from existing projects.html as staggered grid (2 cols desktop, 1 col mobile)
 - Each card: glass bg, project name, dollar value, tech stack tags, one-line outcome
 - Hover: lift, indigo border glow, "View details" arrow
 - Stagger in from bottom, 150ms delay between cards
@@ -112,7 +112,7 @@ Redesign praven-kummar-portfolio from a multi-page Tailwind site into a single-p
 - `input.css` — unchanged (Tailwind directives)
 - `main.js` — rewritten for single-page: scroll-spy, parallax, Intersection Observer animations, mobile menu, counter animations
 - `tailwind.config.js` — add alternating bg color, any new utilities
-- `about.html`, `projects.html`, `experience.html` — removed (content merged into index.html)
+- `about.html`, `projects.html`, `experience.html` — moved to `_archive/` (zero-deletions policy; content merged into index.html)
 
 ## Content Source
 
