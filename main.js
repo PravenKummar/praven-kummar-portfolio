@@ -2,24 +2,39 @@
 // Shared JS for all pages
 // ============================================================
 
-// AOS init
-AOS.init({ duration: 650, easing: 'ease-out-cubic', once: true, offset: 60 });
+// AOS init (Check if AOS is defined, as it's deferred)
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof AOS !== 'undefined') {
+        AOS.init({ duration: 650, easing: 'ease-out-cubic', once: true, offset: 60 });
+    }
+});
 
-// Header scroll effect
+// Header scroll effect with performance optimization
 const header = document.getElementById('siteHeader');
 if (header) {
+    let ticking = false;
     window.addEventListener('scroll', () => {
-        const inner = header.querySelector('div');
-        if (window.scrollY > 50) {
-            header.classList.add('header-scrolled');
-            inner.classList.remove('py-5');
-            inner.classList.add('py-3');
-        } else {
-            header.classList.remove('header-scrolled');
-            inner.classList.remove('py-3');
-            inner.classList.add('py-5');
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const inner = header.querySelector('div');
+                if (window.scrollY > 50) {
+                    header.classList.add('header-scrolled');
+                    if (inner) {
+                        inner.classList.remove('py-5');
+                        inner.classList.add('py-3');
+                    }
+                } else {
+                    header.classList.remove('header-scrolled');
+                    if (inner) {
+                        inner.classList.remove('py-3');
+                        inner.classList.add('py-5');
+                    }
+                }
+                ticking = false;
+            });
+            ticking = true;
         }
-    });
+    }, { passive: true });
 }
 
 // Mobile menu
