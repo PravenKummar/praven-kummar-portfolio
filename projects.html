@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-background text-foreground font-body antialiased">
+    <div id="scrollProgress"></div>
 
     <!-- Header -->
     <header id="siteHeader" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent">
@@ -63,11 +64,19 @@
     <section class="py-20">
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto">
-                <h2 class="font-display text-3xl font-semibold text-foreground mb-12" data-aos="fade-up">Flagship Engagements</h2>
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12">
+                    <h2 class="font-display text-3xl font-semibold text-foreground" data-aos="fade-up">Flagship Engagements</h2>
+                    <div class="flex flex-wrap gap-2" data-aos="fade-up">
+                        <button onclick="filterProjects('all')" class="filter-btn bg-foreground text-background px-6 py-2 rounded-full text-xs font-medium transition-all" data-filter="all">All</button>
+                        <button onclick="filterProjects('cybersecurity')" class="filter-btn border border-border text-muted-foreground px-6 py-2 rounded-full text-xs font-medium hover:bg-muted/50 transition-all" data-filter="cybersecurity">Cybersecurity</button>
+                        <button onclick="filterProjects('fintech')" class="filter-btn border border-border text-muted-foreground px-6 py-2 rounded-full text-xs font-medium hover:bg-muted/50 transition-all" data-filter="fintech">FinTech</button>
+                        <button onclick="filterProjects('infrastructure')" class="filter-btn border border-border text-muted-foreground px-6 py-2 rounded-full text-xs font-medium hover:bg-muted/50 transition-all" data-filter="infrastructure">Infrastructure</button>
+                    </div>
+                </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-32">
                     <!-- QRadar BSN -->
-                    <div class="card-minimal rounded-2xl p-8" data-aos="fade-up" data-aos-delay="0">
+                    <div class="project-card card-minimal rounded-2xl p-8" data-category="cybersecurity" data-aos="fade-up" data-aos-delay="0">
                         <div class="flex justify-between items-start mb-10">
                             <span class="text-xs font-semibold text-accent uppercase tracking-widest">$10M USD</span>
                             <span class="text-[10px] text-muted-foreground font-medium uppercase tracking-widest">Banking</span>
@@ -82,7 +91,7 @@
                     </div>
 
                     <!-- InvoiceNow -->
-                    <div class="card-minimal rounded-2xl p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card card-minimal rounded-2xl p-8" data-category="fintech" data-aos="fade-up" data-aos-delay="100">
                         <div class="flex justify-between items-start mb-10">
                             <span class="text-xs font-semibold text-emerald-500 uppercase tracking-widest">Current</span>
                             <span class="text-[10px] text-muted-foreground font-medium uppercase tracking-widest">FinTech</span>
@@ -97,7 +106,7 @@
                     </div>
 
                     <!-- Regional Security -->
-                    <div class="card-minimal rounded-2xl p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card card-minimal rounded-2xl p-8" data-category="cybersecurity" data-aos="fade-up" data-aos-delay="200">
                         <div class="flex justify-between items-start mb-10">
                             <span class="text-xs font-semibold text-accent uppercase tracking-widest">$2M USD</span>
                             <span class="text-[10px] text-muted-foreground font-medium uppercase tracking-widest">5 Countries</span>
@@ -118,7 +127,7 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- SSO -->
-                    <div class="card-minimal rounded-2xl p-8" data-aos="fade-up">
+                    <div class="project-card card-minimal rounded-2xl p-8" data-category="cybersecurity" data-aos="fade-up">
                         <div class="flex justify-between items-start mb-8">
                             <span class="text-xs font-semibold text-foreground/40 uppercase tracking-widest">58 Apps</span>
                             <span class="text-[10px] text-muted-foreground font-medium uppercase tracking-widest">Aviation</span>
@@ -132,7 +141,7 @@
                     </div>
 
                     <!-- PAM -->
-                    <div class="card-minimal rounded-2xl p-8" data-aos="fade-up">
+                    <div class="project-card card-minimal rounded-2xl p-8" data-category="cybersecurity" data-aos="fade-up">
                         <div class="flex justify-between items-start mb-8">
                             <span class="text-xs font-semibold text-foreground/40 uppercase tracking-widest">1,018 Servers</span>
                             <span class="text-[10px] text-muted-foreground font-medium uppercase tracking-widest">Hospitality</span>
@@ -146,7 +155,7 @@
                     </div>
 
                     <!-- LODB -->
-                    <div class="card-minimal rounded-2xl p-8" data-aos="fade-up">
+                    <div class="project-card card-minimal rounded-2xl p-8" data-category="infrastructure" data-aos="fade-up">
                         <div class="flex justify-between items-start mb-8">
                             <span class="text-xs font-semibold text-foreground/40 uppercase tracking-widest">&euro;80K Savings</span>
                             <span class="text-[10px] text-muted-foreground font-medium uppercase tracking-widest">Manufacturing</span>
@@ -160,7 +169,7 @@
                     </div>
 
                     <!-- Industry 4.0 -->
-                    <div class="card-minimal rounded-2xl p-8" data-aos="fade-up">
+                    <div class="project-card card-minimal rounded-2xl p-8" data-category="infrastructure" data-aos="fade-up">
                         <div class="flex justify-between items-start mb-8">
                             <span class="text-xs font-semibold text-foreground/40 uppercase tracking-widest">IoT</span>
                             <span class="text-[10px] text-muted-foreground font-medium uppercase tracking-widest">China</span>

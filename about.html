@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-background text-foreground font-body antialiased">
+    <div id="scrollProgress"></div>
 
     <!-- Header -->
     <header id="siteHeader" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent">
@@ -101,52 +102,97 @@
         </div>
     </section>
 
-    <!-- TECHNICAL EXPERTISE -->
-    <section class="pb-20">
+    <!-- TECHNICAL EXPERTISE MATRIX -->
+    <section class="pb-32">
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto">
-                <h2 class="font-display text-3xl font-semibold text-foreground mb-12" data-aos="fade-up">Technical Expertise</h2>
+                <h2 class="font-display text-4xl font-semibold text-foreground mb-16" data-aos="fade-up">Technical Expertise Matrix</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    <!-- Column 1 -->
+                    <div class="space-y-12" data-aos="fade-up" data-aos-delay="0">
+                        <div>
+                            <h3 class="text-accent text-[10px] font-semibold tracking-widest uppercase mb-6 border-b border-border/50 pb-2">Governance</h3>
+                            <ul class="space-y-4">
+                                <li class="text-foreground text-sm font-medium">Waterfall / Agile / Hybrid</li>
+                                <li class="text-muted-foreground text-xs leading-relaxed">SDLC Management, PRINCE2, ITIL v4 Frameworks.</li>
+                                <li class="text-foreground text-sm font-medium">Budgeting & ROI</li>
+                                <li class="text-muted-foreground text-xs leading-relaxed">Managing $10M+ USD portfolios with benefits realization.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-accent text-[10px] font-semibold tracking-widest uppercase mb-6 border-b border-border/50 pb-2">Compliance</h3>
+                            <ul class="space-y-4">
+                                <li class="text-foreground text-sm font-medium">MAS TRM / RMiT</li>
+                                <li class="text-muted-foreground text-xs leading-relaxed">Regional financial regulatory compliance across APAC.</li>
+                                <li class="text-foreground text-sm font-medium">Peppol E-Invoicing</li>
+                                <li class="text-muted-foreground text-xs leading-relaxed">IMDA/IRAS (Singapore) & International standards.</li>
+                            </ul>
+                        </div>
+                    </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-                    <div class="space-y-6" data-aos="fade-up">
-                        <h3 class="font-display font-semibold text-foreground text-sm uppercase tracking-widest">Methodologies</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag">Agile/Scrum</span>
-                            <span class="skill-tag">Waterfall</span>
-                            <span class="skill-tag">SDLC</span>
-                            <span class="skill-tag">PRINCE2</span>
+                    <!-- Column 2 -->
+                    <div class="space-y-12" data-aos="fade-up" data-aos-delay="100">
+                        <div>
+                            <h3 class="text-accent text-[10px] font-semibold tracking-widest uppercase mb-6 border-b border-border/50 pb-2">Cybersecurity</h3>
+                            <ul class="space-y-4">
+                                <li class="text-foreground text-sm font-medium">SIEM & UEBA</li>
+                                <li class="text-muted-foreground text-xs leading-relaxed">IBM QRadar, LogRhythm, and Automated SOC response.</li>
+                                <li class="text-foreground text-sm font-medium">Zero Trust & IAM</li>
+                                <li class="text-muted-foreground text-xs leading-relaxed">CyberArk, Thycotic PAM, Okta SSO, and Azure AD.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-accent text-[10px] font-semibold tracking-widest uppercase mb-6 border-b border-border/50 pb-2">Infrastructure</h3>
+                            <ul class="space-y-4">
+                                <li class="text-foreground text-sm font-medium">Cloud Platforms</li>
+                                <li class="text-muted-foreground text-xs leading-relaxed">AWS Microservices, Azure Cloud, and Hybrid DC Ops.</li>
+                                <li class="text-foreground text-sm font-medium">Network Security</li>
+                                <li class="text-muted-foreground text-xs leading-relaxed">Cisco, Fortinet, and Palo Alto regional rollouts.</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="space-y-6" data-aos="fade-up" data-aos-delay="50">
-                        <h3 class="font-display font-semibold text-foreground text-sm uppercase tracking-widest">Cybersecurity</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag">Zero Trust</span>
-                            <span class="skill-tag">SIEM/QRadar</span>
-                            <span class="skill-tag">IAM/SSO</span>
-                            <span class="skill-tag">PAM</span>
+
+                    <!-- Column 3 -->
+                    <div class="space-y-12" data-aos="fade-up" data-aos-delay="200">
+                        <div>
+                            <h3 class="text-accent text-[10px] font-semibold tracking-widest uppercase mb-6 border-b border-border/50 pb-2">Enterprise Systems</h3>
+                            <ul class="space-y-4">
+                                <li class="text-foreground text-sm font-medium">ERP & CRM</li>
+                                <li class="text-muted-foreground text-xs leading-relaxed">SAP ERP, Oracle, Salesforce, and Microsoft Dynamics.</li>
+                                <li class="text-foreground text-sm font-medium">Supply Chain / IoT</li>
+                                <li class="text-muted-foreground text-xs leading-relaxed">WMS, MES, and 2D Matrix Traceability (Zeiss).</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-accent text-[10px] font-semibold tracking-widest uppercase mb-6 border-b border-border/50 pb-2">Integration</h3>
+                            <ul class="space-y-4">
+                                <li class="text-foreground text-sm font-medium">B2B / EDI</li>
+                                <li class="text-muted-foreground text-xs leading-relaxed">AS2, SFTP, and API-led integration architectures.</li>
+                                <li class="text-foreground text-sm font-medium">Modern SaaS</li>
+                                <li class="text-muted-foreground text-xs leading-relaxed">Headless CMS, E-commerce, and FinTech platforms.</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="space-y-6" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="font-display font-semibold text-foreground text-sm uppercase tracking-widest">Cloud & Infra</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag">AWS</span>
-                            <span class="skill-tag">Azure</span>
-                            <span class="skill-tag">Data Center</span>
-                            <span class="skill-tag">IPv6</span>
-                        </div>
-                    </div>
-                    <div class="space-y-6" data-aos="fade-up" data-aos-delay="150">
-                        <h3 class="font-display font-semibold text-foreground text-sm uppercase tracking-widest">FinTech</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag">Peppol</span>
-                            <span class="skill-tag">ISO 20022</span>
-                            <span class="skill-tag">InvoiceNow</span>
-                            <span class="skill-tag">PayNow</span>
+
+                    <!-- Column 4 -->
+                    <div class="space-y-12" data-aos="fade-up" data-aos-delay="300">
+                        <div class="bg-card/40 border border-border/50 rounded-2xl p-8 backdrop-blur-sm">
+                            <h3 class="text-accent text-[10px] font-semibold tracking-widest uppercase mb-6 border-b border-border/50 pb-2">Leadership</h3>
+                            <ul class="space-y-4">
+                                <li class="text-foreground text-sm font-medium">Regional Lead</li>
+                                <li class="text-muted-foreground text-xs leading-relaxed">Managing multi-national teams across 8+ APAC countries.</li>
+                                <li class="text-foreground text-sm font-medium">Stakeholder Mgmt</li>
+                                <li class="text-muted-foreground text-xs leading-relaxed">Direct engagement with C-Suite and Board levels.</li>
+                                <li class="text-foreground text-sm font-medium">Change Management</li>
+                                <li class="text-muted-foreground text-xs leading-relaxed">Prosci ADKAR certified organizational transformation.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-
-                <div class="section-divider mb-20"></div>
+            </div>
+        </div>
+    </section>
 
                 <!-- CERTIFICATIONS -->
                 <h2 class="font-display text-3xl font-semibold text-foreground mb-12" data-aos="fade-up">Certifications</h2>
@@ -216,7 +262,7 @@
                     <a href="https://linkedin.com/in/pravenkummar" target="_blank" class="text-2xl font-display font-semibold text-foreground hover:text-accent transition-colors">LinkedIn</a>
                 </div>
 
-                <a href="Praven-Kummar-Resume.pdf" download class="inline-flex items-center gap-3 bg-foreground text-background px-12 py-5 rounded-full font-medium transition-transform hover:scale-105">
+                <a href="Praven-Kummar-Resume.pdf" download class="magnetic-btn inline-flex items-center gap-3 bg-foreground text-background px-12 py-5 rounded-full font-medium transition-transform hover:scale-105">
                     Download Full CV
                 </a>
             </div>

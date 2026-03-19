@@ -51,6 +51,7 @@
 </head>
 
 <body class="bg-background text-foreground font-body antialiased">
+    <div id="scrollProgress"></div>
 
     <!-- Header -->
     <header id="siteHeader" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent">
@@ -61,7 +62,7 @@
                 <a href="experience.html" class="text-sm text-muted-foreground hover:text-foreground font-medium transition-colors">Experience</a>
                 <a href="projects.html" class="text-sm text-muted-foreground hover:text-foreground font-medium transition-colors">Projects</a>
                 <a href="about.html" class="text-sm text-muted-foreground hover:text-foreground font-medium transition-colors">About</a>
-                <a href="about.html#contact" class="text-sm border border-border px-5 py-2 rounded-full font-medium transition-all hover:bg-foreground hover:text-background">Get in Touch</a>
+                <a href="about.html#contact" class="magnetic-btn text-sm border border-border px-5 py-2 rounded-full font-medium transition-all hover:bg-foreground hover:text-background">Get in Touch</a>
             </nav>
             <button id="menuBtn" class="md:hidden text-foreground focus:outline-none" aria-label="Toggle Menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -125,10 +126,10 @@
                 </div>
 
                 <div class="flex flex-wrap gap-6" data-aos="fade-up" data-aos-delay="400">
-                    <a href="projects.html" class="bg-foreground text-background px-10 py-4 rounded-full font-medium transition-transform hover:scale-105">
+                    <a href="projects.html" class="magnetic-btn bg-foreground text-background px-10 py-4 rounded-full font-medium transition-transform hover:scale-105">
                         View Projects
                     </a>
-                    <a href="experience.html" class="border border-border text-foreground px-10 py-4 rounded-full font-medium transition-all hover:bg-muted/50">
+                    <a href="experience.html" class="magnetic-btn border border-border text-foreground px-10 py-4 rounded-full font-medium transition-all hover:bg-muted/50">
                         Career Timeline
                     </a>
                 </div>
@@ -177,7 +178,7 @@
                             A selection of high-impact regional projects delivered across various industries.
                         </p>
                     </div>
-                    <a href="projects.html" class="hidden md:flex items-center gap-3 text-foreground hover:text-accent transition-colors group" data-aos="fade-up">
+                    <a href="projects.html" class="magnetic-btn hidden md:flex items-center gap-3 text-foreground hover:text-accent transition-colors group" data-aos="fade-up">
                         <span class="text-sm font-medium">View all 9 projects</span>
                         <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                     </a>
