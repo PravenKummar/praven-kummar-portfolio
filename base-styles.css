@@ -1,107 +1,21 @@
 /* ============================================================
-   Minimalistic Modern Styles
+   Portfolio — Custom Styles
    ============================================================ */
 
+/* Base */
 body {
     font-family: 'Inter', sans-serif;
-    background: #09090b; /* Zinc 950 */
-    color: #fafafa; /* Zinc 50 */
+    background: #09090b;
+    color: #fafafa;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
 .font-display { font-family: 'Plus Jakarta Sans', sans-serif; }
 
-/* Refined Glassmorphism */
-.glass {
-    background: rgba(24, 24, 27, 0.4); /* Zinc 900 with opacity */
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.glass-light {
-    background: rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.04);
-}
-
-/* Header */
-.header-scrolled {
-    background: rgba(9, 9, 11, 0.8) !important;
-    backdrop-filter: blur(20px) !important;
-    -webkit-backdrop-filter: blur(20px) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* Timeline - Subtle & Clean */
-.timeline-line::before {
-    content: '';
-    position: absolute;
-    left: 24px;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background: #27272a; /* Zinc 800 */
-    z-index: 0;
-}
-.timeline-dot {
-    background: #09090b;
-    border: 1px solid #6366f1; /* Indigo 500 */
-}
-.timeline-dot-current {
-    background: #09090b;
-    border: 1px solid #10b981; /* Emerald 500 */
-}
-
-/* Skill tags */
-.skill-tag {
-    padding: 0.2rem 0.6rem;
-    font-size: 0.7rem;
-    font-weight: 500;
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    color: #a1a1aa; /* Zinc 400 */
-}
-
-/* Card - Minimalist Focus */
-.card-minimal {
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    background: rgba(24, 24, 27, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-.card-minimal:hover {
-    background: rgba(24, 24, 27, 0.8);
-    border-color: rgba(99, 102, 241, 0.2); /* Indigo 500 subtle */
-    transform: translateY(-4px);
-}
-
-/* Subtle Hero Glow - Extremely Muted */
-.hero-glow {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    height: 400px;
-    background: radial-gradient(ellipse, rgba(99, 102, 241, 0.04) 0%, transparent 70%);
-    filter: blur(80px);
-    pointer-events: none;
-    z-index: -1;
-}
-
-/* Progress bar - Refined */
-.progress-gradient {
-    background: #6366f1; /* Single color for minimalism */
-}
-
-/* Section divider */
-.section-divider {
-    height: 1px;
-    background: linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent);
-}
+html { scroll-behavior: smooth; }
+::selection { background: rgba(99, 102, 241, 0.2); color: #fafafa; }
 
 /* Scroll Progress Bar */
 #scrollProgress {
@@ -109,16 +23,35 @@ body {
     top: 0;
     left: 0;
     width: 0%;
-    height: 3px;
+    height: 2px;
     background: #6366f1;
-    z-index: 100;
+    z-index: 200;
     transition: width 0.1s ease-out;
 }
 
-/* Active Nav Link */
-.nav-link-active {
-    color: #fafafa !important;
+/* Navigation */
+.nav-glass {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+.nav-scrolled {
+    background: rgba(9, 9, 11, 0.85) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-link {
+    position: relative;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link-active {
+    color: #fafafa;
+}
+
 .nav-link-active::after {
     content: '';
     position: absolute;
@@ -129,27 +62,269 @@ body {
     background: #6366f1;
 }
 
-/* Magnetic Button Transition */
+/* Mobile Menu Overlay */
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(9, 9, 11, 0.98);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.mobile-menu.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.mobile-menu a {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-menu.active a {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Glassmorphism */
+.glass {
+    background: rgba(24, 24, 27, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-pill {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: all 0.3s ease;
+}
+
+.glass-pill:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(99, 102, 241, 0.2);
+}
+
+/* Hero */
+.hero-glow {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(99, 102, 241, 0.06) 0%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Dot Grid Background */
+.dot-grid {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 32px 32px;
+}
+
+/* Parallax Section */
+.parallax-bg {
+    will-change: transform;
+    transition: transform 0.1s linear;
+}
+
+/* Progress Bar (Impact Section) */
+.progress-bar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #6366f1;
+    border-radius: 2px;
+    width: 0%;
+    transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Project Cards */
+.project-card {
+    background: rgba(24, 24, 27, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover {
+    background: rgba(24, 24, 27, 0.8);
+    border-color: rgba(99, 102, 241, 0.2);
+    transform: translateY(-6px);
+}
+
+/* Timeline */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(99, 102, 241, 0.2);
+    transform: translateX(-50%);
+}
+
+.timeline-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #09090b;
+    border: 2px solid #6366f1;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.timeline-dot-current {
+    border-color: #10b981;
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+}
+
+.timeline-card {
+    background: rgba(24, 24, 27, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+    border-color: rgba(99, 102, 241, 0.15);
+}
+
+/* Mobile timeline */
+@media (max-width: 767px) {
+    .timeline-line {
+        left: 20px;
+    }
+    .timeline-dot {
+        left: 20px;
+    }
+}
+
+/* Skill Tags */
+.skill-tag {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #a1a1aa;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: rgba(99, 102, 241, 0.1);
+    border-color: rgba(99, 102, 241, 0.2);
+    color: #c7d2fe;
+}
+
+/* Expertise Card */
+.expertise-card {
+    background: rgba(24, 24, 27, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    transition: all 0.3s ease;
+}
+
+.expertise-card:hover {
+    border-color: rgba(99, 102, 241, 0.15);
+    background: rgba(24, 24, 27, 0.5);
+}
+
+/* Section Divider */
+.section-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.05), transparent);
+}
+
+/* Magnetic Button */
 .magnetic-btn {
     display: inline-block;
     transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* Page header */
-.page-header {
-    padding-top: 10rem;
-    padding-bottom: 4rem;
+/* Hero Letter Animation */
+.hero-name span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: letterReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-html { scroll-behavior: smooth; }
-::selection { background: rgba(99, 102, 241, 0.2); color: #fafafa; }
-
-/* Custom Animations */
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+@keyframes letterReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.animate-fade-in-up {
-    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+/* Scroll Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-left.revealed,
+.reveal-right.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Stagger Delays */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+.stagger-6 { transition-delay: 0.6s; }
+.stagger-7 { transition-delay: 0.7s; }
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+    .parallax-bg {
+        transform: none !important;
+    }
+    .reveal, .reveal-left, .reveal-right {
+        opacity: 1;
+        transform: none;
+    }
 }
