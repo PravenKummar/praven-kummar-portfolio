@@ -1,0 +1,96 @@
+<h2>Single Page Layout Structure</h2>
+<p class="subtitle">How should the sections flow as the visitor scrolls?</p>
+
+<div class="cards">
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#09090b; padding:20px; min-height:320px; font-family:system-ui; overflow:hidden;">
+      <!-- Option A: Full-bleed sections -->
+      <div style="background:rgba(99,102,241,0.03); border:1px solid rgba(99,102,241,0.1); border-radius:4px; padding:12px; margin-bottom:6px;">
+        <div style="color:rgba(255,255,255,0.3); font-size:8px; letter-spacing:2px; text-transform:uppercase; margin-bottom:4px;">Section 1 — Full viewport</div>
+        <div style="color:#fafafa; font-size:16px; font-weight:700;">HERO + NAME + TITLE</div>
+        <div style="color:rgba(255,255,255,0.2); font-size:9px; margin-top:2px;">Animated stats counters below</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04); border-radius:4px; padding:12px; margin-bottom:6px;">
+        <div style="color:rgba(255,255,255,0.3); font-size:8px; letter-spacing:2px; text-transform:uppercase; margin-bottom:4px;">Section 2 — Full width</div>
+        <div style="color:#fafafa; font-size:14px; font-weight:600;">ABOUT / SUMMARY</div>
+      </div>
+      <div style="background:rgba(99,102,241,0.03); border:1px solid rgba(99,102,241,0.1); border-radius:4px; padding:12px; margin-bottom:6px;">
+        <div style="color:rgba(255,255,255,0.3); font-size:8px; letter-spacing:2px; text-transform:uppercase; margin-bottom:4px;">Section 3 — Card grid</div>
+        <div style="color:#fafafa; font-size:14px; font-weight:600;">FEATURED PROJECTS</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04); border-radius:4px; padding:12px; margin-bottom:6px;">
+        <div style="color:#fafafa; font-size:14px; font-weight:600;">EXPERIENCE TIMELINE</div>
+      </div>
+      <div style="background:rgba(99,102,241,0.03); border:1px solid rgba(99,102,241,0.1); border-radius:4px; padding:12px;">
+        <div style="color:#fafafa; font-size:14px; font-weight:600;">SKILLS + CONTACT</div>
+      </div>
+      <div style="margin-top:10px; color:rgba(99,102,241,0.4); font-size:9px; letter-spacing:2px; text-align:center;">ALTERNATING SECTIONS &middot; FULL-BLEED</div>
+    </div>
+    <div class="card-body">
+      <h3>A — Alternating Full-Bleed</h3>
+      <p>Each section owns the full viewport width. Alternating subtle background tones create rhythm. Sections feel like distinct chapters. Clean, editorial.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#09090b; padding:20px; min-height:320px; font-family:system-ui; overflow:hidden;">
+      <!-- Option B: Cinematic sections -->
+      <div style="background:rgba(99,102,241,0.03); border:1px solid rgba(99,102,241,0.1); border-radius:4px; padding:12px; margin-bottom:10px; min-height:60px;">
+        <div style="color:rgba(255,255,255,0.3); font-size:8px; letter-spacing:2px; text-transform:uppercase; margin-bottom:4px;">100vh — Snap scroll</div>
+        <div style="color:#fafafa; font-size:16px; font-weight:700;">HERO</div>
+        <div style="color:rgba(255,255,255,0.15); font-size:9px;">↓ Scroll indicator</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04); border-radius:4px; padding:12px; margin-bottom:10px; min-height:60px;">
+        <div style="color:rgba(255,255,255,0.3); font-size:8px; letter-spacing:2px; text-transform:uppercase; margin-bottom:4px;">100vh — Parallax layers</div>
+        <div style="color:#fafafa; font-size:14px; font-weight:600;">STATS + IMPACT</div>
+      </div>
+      <div style="background:rgba(99,102,241,0.03); border:1px solid rgba(99,102,241,0.1); border-radius:4px; padding:12px; margin-bottom:10px; min-height:60px;">
+        <div style="color:rgba(255,255,255,0.3); font-size:8px; letter-spacing:2px; text-transform:uppercase; margin-bottom:4px;">100vh — Horizontal scroll cards</div>
+        <div style="color:#fafafa; font-size:14px; font-weight:600;">PROJECTS</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04); border-radius:4px; padding:12px; min-height:40px;">
+        <div style="color:#fafafa; font-size:14px; font-weight:600;">EXPERIENCE → SKILLS → CONTACT</div>
+      </div>
+      <div style="margin-top:10px; color:rgba(99,102,241,0.4); font-size:9px; letter-spacing:2px; text-align:center;">FULL-SCREEN SECTIONS &middot; CINEMATIC</div>
+    </div>
+    <div class="card-body">
+      <h3>B — Cinematic Full-Screen</h3>
+      <p>Each major section takes the full viewport. Scroll-snap between sections. Parallax depth, horizontal scroll for projects. Maximum drama and immersion.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#09090b; padding:20px; min-height:320px; font-family:system-ui; overflow:hidden;">
+      <!-- Option C: Contained luxury -->
+      <div style="max-width:80%; margin:0 auto;">
+        <div style="background:rgba(99,102,241,0.03); border:1px solid rgba(99,102,241,0.1); border-radius:8px; padding:12px; margin-bottom:8px;">
+          <div style="color:#fafafa; font-size:16px; font-weight:700;">HERO</div>
+          <div style="color:rgba(255,255,255,0.2); font-size:9px;">Contained width, generous padding</div>
+        </div>
+        <div style="display:flex; gap:6px; margin-bottom:8px;">
+          <div style="flex:1; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04); border-radius:8px; padding:10px;">
+            <div style="color:#fafafa; font-size:11px; font-weight:600;">About</div>
+          </div>
+          <div style="flex:1; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04); border-radius:8px; padding:10px;">
+            <div style="color:#fafafa; font-size:11px; font-weight:600;">Stats</div>
+          </div>
+        </div>
+        <div style="background:rgba(99,102,241,0.03); border:1px solid rgba(99,102,241,0.1); border-radius:8px; padding:12px; margin-bottom:8px;">
+          <div style="color:#fafafa; font-size:14px; font-weight:600;">PROJECTS</div>
+          <div style="color:rgba(255,255,255,0.2); font-size:9px;">Bento grid layout</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04); border-radius:8px; padding:12px; margin-bottom:8px;">
+          <div style="color:#fafafa; font-size:14px; font-weight:600;">EXPERIENCE</div>
+        </div>
+        <div style="background:rgba(99,102,241,0.03); border:1px solid rgba(99,102,241,0.1); border-radius:8px; padding:12px;">
+          <div style="color:#fafafa; font-size:14px; font-weight:600;">SKILLS + CONTACT</div>
+        </div>
+      </div>
+      <div style="margin-top:10px; color:rgba(99,102,241,0.4); font-size:9px; letter-spacing:2px; text-align:center;">CONTAINED &middot; BENTO &middot; ROUNDED</div>
+    </div>
+    <div class="card-body">
+      <h3>C — Contained Bento</h3>
+      <p>Content lives in a centered container with generous margins. Bento-grid cards, rounded corners, floating glass panels. Elegant and structured.</p>
+    </div>
+  </div>
+</div>
