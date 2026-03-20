@@ -1,149 +1,220 @@
 // ============================================================
-// Shared JS for all pages
+// Portfolio — Main JavaScript
 // ============================================================
 
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. AOS Initialization
-    if (typeof AOS !== 'undefined') {
-        AOS.init({ 
-            duration: 800, 
-            easing: 'ease-out-quart', 
-            once: true, 
-            offset: 100 
-        });
+document.addEventListener("DOMContentLoaded", () => {
+  // --- Scroll Progress Bar ---
+  const scrollProgress = document.getElementById("scrollProgress");
+  function updateScrollProgress() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    if (scrollProgress) scrollProgress.style.width = scrollPercent + "%";
+  }
+
+  // --- Navigation Scroll Effect ---
+  const nav = document.getElementById("mainNav");
+  function updateNav() {
+    if (!nav) return;
+    if (window.scrollY > 50) {
+      nav.classList.add("nav-scrolled");
+    } else {
+      nav.classList.remove("nav-scrolled");
     }
+  }
 
-    // 2. Header Scroll Effect & Scroll Progress
-    const header = document.getElementById('siteHeader');
-    const scrollProgress = document.getElementById('scrollProgress');
-
-    window.addEventListener('scroll', () => {
-        // Header background toggle
-        if (window.scrollY > 50) {
-            header.classList.add('header-scrolled');
-        } else {
-            header.classList.remove('header-scrolled');
-        }
-
-        // Progress Bar logic
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-        if (scrollProgress) {
-            scrollProgress.style.width = scrolled + "%";
-        }
-    });
-
-    // 3. Active Navigation Link Indicator
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(link => {
-        const linkPath = link.getAttribute('href');
-        const normalizedPath = currentPath === '/' ? 'index.html' : currentPath.replace('/', '');
-        
-        if (normalizedPath.includes(linkPath.replace('.html', '')) || 
-           (currentPath === '/' && linkPath === 'index.html')) {
-            link.classList.add('nav-link-active');
-            link.classList.remove('text-muted-foreground');
-        }
-    });
-
-    // 4. Mobile Menu Toggle
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+  // --- Scroll Spy ---
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-link[data-section]");
+  function updateScrollSpy() {
+    const scrollPos = window.scrollY + 200;
+    sections.forEach((section) => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      const id = section.getAttribute("id");
+      if (scrollPos >= top && scrollPos < top + height) {
+        navLinks.forEach((link) => {
+          link.classList.remove("nav-link-active");
+          if (link.getAttribute("data-section") === id) {
+            link.classList.add("nav-link-active");
+          }
         });
+      }
+    });
+  }
+
+  // --- Combined Scroll Handler ---
+  let ticking = false;
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        updateScrollProgress();
+        updateNav();
+        updateScrollSpy();
+        updateParallax();
+        ticking = false;
+      });
+      ticking = true;
     }
+  });
 
-    // 5. Magnetic Button Effect
-    const magneticBtns = document.querySelectorAll('.magnetic-btn');
-    magneticBtns.forEach(btn => {
-        btn.addEventListener('mousemove', function(e) {
-            const position = btn.getBoundingClientRect();
-            const x = e.pageX - position.left - position.width / 2;
-            const y = e.pageY - position.top - position.height / 2;
-            btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
-        });
-        btn.addEventListener('mouseout', function() {
-            btn.style.transform = 'translate(0px, 0px)';
-        });
+  // --- Mobile Menu ---
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("active");
+      document.body.style.overflow = mobileMenu.classList.contains("active") ? "hidden" : "";
+      // Stagger link animations
+      const links = mobileMenu.querySelectorAll("a");
+      links.forEach((link, i) => {
+        link.style.transitionDelay = mobileMenu.classList.contains("active")
+          ? `${0.1 + i * 0.08}s`
+          : "0s";
+      });
     });
+    // Close on link click
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+        document.body.style.overflow = "";
+      });
+    });
+  }
 
-    // 6. Dynamic Hero Glow (Mouse Follow)
-    const heroGlow = document.querySelector('.hero-glow');
-    if (heroGlow) {
-        document.addEventListener('mousemove', (e) => {
-            const x = e.clientX;
-            const y = e.clientY;
-            heroGlow.style.left = x + 'px';
-            heroGlow.style.top = y + 'px';
-        });
+  // --- Hero Name Letter Animation ---
+  const heroName = document.querySelector(".hero-name");
+  if (heroName) {
+    const text = heroName.textContent;
+    heroName.textContent = "";
+    text.split("").forEach((char, i) => {
+      const span = document.createElement("span");
+      span.textContent = char === " " ? "\u00A0" : char;
+      span.style.animationDelay = `${0.05 * i}s`;
+      heroName.appendChild(span);
+    });
+  }
+
+  // --- Hero Glow Follow Mouse ---
+  const heroGlow = document.querySelector(".hero-glow");
+  if (heroGlow) {
+    document.addEventListener("mousemove", (e) => {
+      const x = (e.clientX / window.innerWidth) * 100;
+      const y = (e.clientY / window.innerHeight) * 100;
+      heroGlow.style.left = x + "%";
+      heroGlow.style.top = y + "%";
+    });
+  }
+
+  // --- Intersection Observer: Reveal on Scroll ---
+  const revealElements = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("revealed");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+  );
+  revealElements.forEach((el) => revealObserver.observe(el));
+
+  // --- Counter Animation ---
+  const counters = document.querySelectorAll("[data-count]");
+  const counterObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+  counters.forEach((el) => counterObserver.observe(el));
+
+  function animateCounter(el) {
+    const target = parseInt(el.getAttribute("data-count"), 10);
+    const prefix = el.getAttribute("data-prefix") || "";
+    const suffix = el.getAttribute("data-suffix") || "";
+    const duration = 2000;
+    const start = performance.now();
+
+    function update(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.floor(eased * target);
+      el.textContent = prefix + current.toLocaleString() + suffix;
+      if (progress < 1) requestAnimationFrame(update);
     }
+    requestAnimationFrame(update);
+  }
 
-    // 7. Counter Animation (Refined)
-    const counters = document.querySelectorAll('.counter');
-    const speed = 200;
+  // --- Progress Bar Animation ---
+  const progressFills = document.querySelectorAll(".progress-fill");
+  const progressObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const target = entry.target.getAttribute("data-width");
+          entry.target.style.width = target;
+          progressObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+  progressFills.forEach((el) => progressObserver.observe(el));
 
-    const startCounter = (counter) => {
-        const updateCount = () => {
-            const target = +counter.getAttribute('data-target');
-            const count = +counter.innerText.replace(/,/g, '');
-            const inc = Math.ceil(target / speed);
+  // --- Parallax ---
+  const parallaxElements = document.querySelectorAll(".parallax-bg");
+  function updateParallax() {
+    // Disable on mobile for performance
+    if (window.innerWidth < 768) return;
+    parallaxElements.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      const speed = parseFloat(el.getAttribute("data-speed")) || 0.5;
+      const yPos = -(rect.top * speed);
+      el.style.transform = `translateY(${yPos}px)`;
+    });
+  }
 
-            if (count < target) {
-                const newVal = count + inc > target ? target : count + inc;
-                counter.innerText = counter.getAttribute('data-separator') === 'true' 
-                    ? newVal.toLocaleString() 
-                    : newVal;
-                setTimeout(updateCount, 15);
-            } else {
-                counter.innerText = counter.getAttribute('data-separator') === 'true' 
-                    ? target.toLocaleString() 
-                    : target;
-            }
-        };
-        updateCount();
-    };
+  // --- Magnetic Buttons ---
+  const magneticBtns = document.querySelectorAll(".magnetic-btn");
+  magneticBtns.forEach((btn) => {
+    btn.addEventListener("mousemove", (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+    });
+    btn.addEventListener("mouseleave", () => {
+      btn.style.transform = "translate(0, 0)";
+    });
+  });
 
-    // Intersection Observer for counters
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                startCounter(entry.target);
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
+  // --- Reduced Motion Check ---
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (prefersReducedMotion) {
+    // Skip parallax and show all reveals immediately
+    document.querySelectorAll(".reveal, .reveal-left, .reveal-right").forEach((el) => {
+      el.classList.add("revealed");
+    });
+    counters.forEach((el) => {
+      const target = parseInt(el.getAttribute("data-count"), 10);
+      const prefix = el.getAttribute("data-prefix") || "";
+      const suffix = el.getAttribute("data-suffix") || "";
+      el.textContent = prefix + target.toLocaleString() + suffix;
+    });
+  }
 
-    counters.forEach(counter => observer.observe(counter));
+  // --- Initialize ---
+  updateScrollProgress();
+  updateNav();
+  updateScrollSpy();
 });
-
-// ============================================================
-// Project Filtering (for projects.html)
-// ============================================================
-function filterProjects(category) {
-    const cards = document.querySelectorAll('.project-card');
-    const buttons = document.querySelectorAll('.filter-btn');
-
-    buttons.forEach(btn => {
-        if (btn.getAttribute('data-filter') === category) {
-            btn.classList.add('bg-foreground', 'text-background');
-            btn.classList.remove('border-border', 'text-muted-foreground');
-        } else {
-            btn.classList.remove('bg-foreground', 'text-background');
-            btn.classList.add('border-border', 'text-muted-foreground');
-        }
-    });
-
-    cards.forEach(card => {
-        if (category === 'all' || card.getAttribute('data-category') === category) {
-            card.style.display = 'block';
-            setTimeout(() => card.style.opacity = '1', 10);
-        } else {
-            card.style.opacity = '0';
-            setTimeout(() => card.style.display = 'none', 300);
-        }
-    });
-}
